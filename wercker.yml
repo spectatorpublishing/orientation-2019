@@ -25,6 +25,7 @@ build:
     # A step that executes `npm install` command
     - npm-install
 
+
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
@@ -35,5 +36,6 @@ build:
     - script:
         name: run linters
         code: |
-          eslint --ext .jsx --ext .js src
-          stylelint "**/*.css" "**/*.js" "**/*.jsx"
+          npm run eslint
+          npm run stylelint
+
