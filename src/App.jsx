@@ -1,12 +1,33 @@
 import React from 'react';
+import styled from 'styled-components';
 import logo from './logo.svg';
-import './App.css';
+
+const AppContainer = styled.div`
+  text-align: center;
+`;
+
+const Header = styled.header`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`;
+
+const Logo = styled.img`
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <AppContainer>
+      <Header>
+        <Logo src={logo} />
         <p>
           Edit
           {' '}
@@ -22,8 +43,8 @@ and save to reload.
         >
           Learn React
         </a>
-      </header>
-    </div>
+      </Header>
+    </AppContainer>
   );
 }
 
