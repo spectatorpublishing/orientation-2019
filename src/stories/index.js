@@ -20,6 +20,8 @@ storiesOf("Button", module)
   ));
 
 storiesOf("Section", module).add("with member information", () => (
-  <SectionTitle title="demo title" members={["1, a", "2, b", "3, c"]} />
+  <SectionTitle
+    title="demo title"
+    members={["name1, position1", "name2, position2", "name3, position3"]}
+  />
 ));
-// storiesOf('Section', module).add('testing', () => <SectionTitle />)
