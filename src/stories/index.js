@@ -7,6 +7,11 @@ import { linkTo } from "@storybook/addon-links";
 import { Button, Welcome } from "@storybook/react/demo";
 import SectionTitle from "../components/SectionTitle.jsx";
 
+const sectionComponentDemo = {
+  title: "demo title",
+  members: ["name1, position1", "name2, position2", "name3, position3"]
+};
+
 storiesOf("Welcome", module).add("to Storybook", () => (
   <Welcome showApp={linkTo("Button")} />
 ));
@@ -21,7 +26,7 @@ storiesOf("Button", module)
 
 storiesOf("Section", module).add("with member information", () => (
   <SectionTitle
-    title="demo title"
-    members={["name1, position1", "name2, position2", "name3, position3"]}
+    title={sectionComponentDemo.title}
+    members={sectionComponentDemo.members}
   />
 ));

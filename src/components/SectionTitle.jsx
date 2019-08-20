@@ -7,13 +7,13 @@ const MemberItem = styled.h4`
   color: white;
 `;
 const Title = styled.h2`
-  text-align : left;
-  padding-bottom : 0.6em;
+  text-align: left;
+  padding-bottom: 0.6rem;
   color: white;
 `;
 const Container = styled.div`
   text-align: left;
-  padding: 1em;
+  padding: 1rem;
   background: #106e75;
   width: 9rem;
 `;
