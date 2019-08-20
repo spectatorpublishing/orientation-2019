@@ -1,8 +1,8 @@
 import { configure } from "@storybook/react";
 import { addDecorator } from "@storybook/react";
 import React from "react";
-import { ThemeProvider } from "styled-components";
 import { withInfo } from "@storybook/addon-info";
+import { ThemeProvider } from "styled-components";
 import { GlobalStyles, theme } from "../src/GlobalStyles";
 
 function withGlobalStyles(storyFn) {
