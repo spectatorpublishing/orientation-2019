@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import React, { Component } from 'react';
 
-
 const Container = styled.div``;
 
 const Row = styled.div`
@@ -29,11 +28,9 @@ export default class Orientation extends Component {
         <Row>
           <WelcomeColumn>
             <WelcomeContainer>
-              <div>Welcome</div>
-              <div>Class of 2023</div>
-              <div>
-                Select an option below to explore your orientation guide
-              </div>
+              <h1>Welcome</h1>
+              <h2>Class of 2023</h2>
+              <p>Select an option below to explore your orientation guide</p>
             </WelcomeContainer>
           </WelcomeColumn>
           <WelcomeColumn />
