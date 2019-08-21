@@ -11,7 +11,6 @@ const Container = styled.div`
 
 const Box = styled.div`
   text-align: center;
-  background: #f1bc9c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +22,7 @@ const Box = styled.div`
 
 // here dimensions are set to offset the size of the border
 const BoxShadow = styled.div`
-  border: 0.3rem solid #f26d5b;
+  border: 0.3rem solid;
   width: 15.7rem;
   height: 23.7rem;
   position: absolute;
@@ -31,17 +30,18 @@ const BoxShadow = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #174d5b;
   padding: 3rem;
 `;
 
 const BannerButton = (props) => {
-  const { title, url } = props;
+  const {
+    title, url, color, shadowColor, textColor,
+  } = props;
 
   return (
     <Container>
-      <BoxShadow />
-      <Box>
+      <BoxShadow style={{ borderColor: shadowColor }} />
+      <Box style={{ background: color }}>
         <a
           href={url}
           target="_blank"
@@ -50,7 +50,7 @@ const BannerButton = (props) => {
           // "noreferrer" prevents browser from sending original page address as referrer
           style={{ textDecoration: 'none' }}
         >
-          <Title>{title}</Title>
+          <Title style={{ color: textColor }}>{title}</Title>
         </a>
       </Box>
     </Container>
@@ -60,6 +60,15 @@ const BannerButton = (props) => {
 BannerButton.propTypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  shadowColor: PropTypes.string,
+  textColor: PropTypes.string,
+};
+
+BannerButton.defaultProps = {
+  color: '#f1bc9c',
+  shadowColor: '#f26d5b',
+  textColor: '#174d5b',
 };
 
 export default BannerButton;
