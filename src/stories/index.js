@@ -1,7 +1,6 @@
 import React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { linkTo } from "@storybook/addon-links";
 
 import SectionTitle from "../components/SectionTitle.jsx";
 import MapsList from "../components/MapsList.jsx";
