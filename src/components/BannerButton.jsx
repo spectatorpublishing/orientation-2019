@@ -18,6 +18,7 @@ const Box = styled.div`
   height: 24rem;
   position: absolute;
   top: 0.7rem;
+  background: ${(props) => props.color};
 `;
 
 // here dimensions are set to offset the size of the border
@@ -27,21 +28,22 @@ const BoxShadow = styled.div`
   height: 23.7rem;
   position: absolute;
   left: 0.7rem;
+  border-color: ${(props) => props.shadowColor};
 `;
 
 const Title = styled.h1`
   padding: 3rem;
+  color: ${(props) => props.textColor};
 `;
 
 const BannerButton = (props) => {
   const {
     title, url, color, shadowColor, textColor,
   } = props;
-
   return (
     <Container>
-      <BoxShadow style={{ borderColor: shadowColor }} />
-      <Box style={{ background: color }}>
+      <BoxShadow shadowColor={shadowColor} />
+      <Box color={color}>
         <a
           href={url}
           target="_blank"
@@ -50,7 +52,7 @@ const BannerButton = (props) => {
           // "noreferrer" prevents browser from sending original page address as referrer
           style={{ textDecoration: 'none' }}
         >
-          <Title style={{ color: textColor }}>{title}</Title>
+          <Title textColor={textColor}>{title}</Title>
         </a>
       </Box>
     </Container>
