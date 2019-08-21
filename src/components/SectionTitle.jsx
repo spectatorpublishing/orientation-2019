@@ -13,9 +13,8 @@ const Title = styled.h2`
 `;
 const Container = styled.div`
   text-align: left;
-  padding: 1rem;
+  padding: 0.5rem;
   background: #106e75;
-  width: 9rem;
 `;
 const SectionTitle = (props) => {
   const { title, members } = props;
