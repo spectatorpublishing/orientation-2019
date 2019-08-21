@@ -53,7 +53,7 @@ const Title = styled.h1`
 
 const ImageContainer = styled.div`
   margin: 0.5rem;
-  width: 50%;
+  width: 72%;
   padding: 0.8rem;
 `;
 
@@ -72,6 +72,7 @@ const LastRowTextSection = styled.div`
   flex-direction: row;
   width: 100%;
   align-items: flex-start;
+  padding: 0.5rem 0rem;
 `;
 
 const StaffContainer = (props) => {
