@@ -28,9 +28,11 @@ export default class Orientation extends Component {
         <Row>
           <WelcomeColumn>
             <WelcomeContainer>
-              <h1>Welcome</h1>
-              <h2>Class of 2023</h2>
-              <p>Select an option below to explore your orientation guide</p>
+              <div>
+                <h1>Welcome</h1>
+                <h2>Class of 2023</h2>
+                <p>Select an option below to explore your orientation guide</p>
+              </div>
             </WelcomeContainer>
           </WelcomeColumn>
           <WelcomeColumn />
