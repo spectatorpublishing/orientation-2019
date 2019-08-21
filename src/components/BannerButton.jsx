@@ -2,7 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+// the dimensions of Container are 1 + dimensions of Box
 const Container = styled.div`
+  width: 17rem;
+  height: 25rem;
+  position: relative;
+`;
+
+const Box = styled.div`
   text-align: center;
   background: #f1bc9c;
   display: flex;
@@ -10,36 +17,43 @@ const Container = styled.div`
   justify-content: center;
   width: 16rem;
   height: 24rem;
-  margin-top: -23.5rem;
+  position: absolute;
+  top: 0.7rem;
 `;
 
-const Container2 = styled.div`
+// here dimensions are set to offset the size of the border
+const BoxShadow = styled.div`
   border: 0.3rem solid #f26d5b;
-  width: 16rem;
-  height: 24rem;
-  margin-left: 0.5rem;
+  width: 15.7rem;
+  height: 23.7rem;
+  position: absolute;
+  left: 0.7rem;
 `;
+
 const Title = styled.h1`
   color: #174d5b;
-  padding: 3rem 3rem;
+  padding: 3rem;
 `;
+
 const BannerButton = (props) => {
   const { title, url } = props;
 
   return (
-    <div>
-      <Container2 />
-      <Container>
+    <Container>
+      <BoxShadow />
+      <Box>
         <a
           href={url}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer" // set to avoid potential data breach on the original page side;
+          // "noopener" denies access of the new page to the original,
+          // "noreferrer" prevents browser from sending original page address as referrer
           style={{ textDecoration: 'none' }}
         >
           <Title>{title}</Title>
         </a>
-      </Container>
-    </div>
+      </Box>
+    </Container>
   );
 };
 
