@@ -19,7 +19,7 @@ const MapsHeading = styled.h1`
   flex: 30%;
   color: #ffffff;
   text-align: right;
-  margin-right: 16px;
+  margin-right: 0.75rem;
 `;
 
 const MapsDescription = styled.h4`
@@ -27,29 +27,37 @@ const MapsDescription = styled.h4`
   flex: 70%;
   color: #ffffff;
   text-align: left;
-  margin-left: 16px;
+  margin-left: 0.75rem;
 `;
 
 const Body = styled.div`
   display: flex;
   text-align: center;
-  padding-bottom: 16px;
+  padding-bottom: 0.75rem;
 `;
 
 const ItemList = styled.div`
   flex: 50%;
   font-style: italic;
   display: flex;
+  font-size: 16px;
   flex-direction: column;
-  font-size: 14px;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 `;
 
 const Item = styled.h4`
+  font-size: 16px;
   flex: 50%;
-  padding: 8px;
+  padding: 0.75rem;
   color: #ffffff;
+`;
+
+const Vr = styled.hr`
+  height: rem;
+  width: 1px;
+  color: #ffffff;
+  border-left: none;
 `;
 
 /*
@@ -66,6 +74,12 @@ leftList = [
 ]
 */
 
+const generateList = (list) => list.map((child) => (
+  <HashLink style={{ textDecoration: 'none' }} to={child.url}>
+    {<Item>{child.name}</Item>}
+  </HashLink>
+));
+
 const MapsList = (props) => {
   const { leftList, rightList } = props;
   return (
@@ -76,21 +90,9 @@ const MapsList = (props) => {
           <MapsDescription>explore places on and around campus</MapsDescription>
         </Title>
         <Body>
-          <ItemList>
-            {leftList.map((child) => (
-              <HashLink style={{ textDecoration: 'none' }} to={child.url}>
-                {<Item>{child.name}</Item>}
-              </HashLink>
-            ))}
-          </ItemList>
-          <hr width="1" size="90%" color="#ffffff" />
-          <ItemList>
-            {rightList.map((child) => (
-              <HashLink style={{ textDecoration: 'none' }} to={child.url}>
-                {<Item>{child.name}</Item>}
-              </HashLink>
-            ))}
-          </ItemList>
+          <ItemList>{generateList(leftList)}</ItemList>
+          <Vr />
+          <ItemList>{generateList(rightList)}</ItemList>
         </Body>
       </Container>
     </HashRouter>
