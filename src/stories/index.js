@@ -6,6 +6,7 @@ import { linkTo } from "@storybook/addon-links";
 
 import { Button, Welcome } from "@storybook/react/demo";
 import SectionTitle from "../components/SectionTitle.jsx";
+import MapsList from "../components/MapsList.jsx";
 
 const sectionComponentDemo = {
   title: "demo title",
@@ -29,4 +30,27 @@ storiesOf("Section", module).add("with member information", () => (
     title={sectionComponentDemo.title}
     members={sectionComponentDemo.members}
   />
+));
+
+const dataUrl = { name: "places to hang out", url: "/dummyurl" };
+const rightData = [
+  dataUrl,
+  dataUrl,
+  dataUrl,
+  dataUrl,
+  dataUrl,
+  dataUrl,
+  dataUrl
+];
+const leftData = [
+  dataUrl,
+  dataUrl,
+  dataUrl,
+  dataUrl,
+  dataUrl,
+  dataUrl,
+  dataUrl
+];
+storiesOf("MapsList", module).add("default", () => (
+  <MapsList rightList={rightData} leftList={leftData} />
 ));
