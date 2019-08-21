@@ -1,10 +1,8 @@
 import React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import { Button, Welcome } from "@storybook/react/demo";
 import SectionTitle from "../components/SectionTitle.jsx";
 import MapsList from "../components/MapsList.jsx";
 import Article from "../components/Article";
@@ -13,14 +11,6 @@ const sectionComponentDemo = {
   title: "demo title",
   members: ["name1, position1", "name2, position2", "name3, position3"]
 };
-
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-));
-
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-));
 
 storiesOf("Section", module).add("with member information", () => (
   <SectionTitle
