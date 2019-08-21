@@ -52,7 +52,7 @@ storiesOf("MapsList", module).add("default", () => (
   <MapsList rightList={rightData} leftList={leftData} />
 ));
 
-storiesOf("Article", module).add("Without Container", () => (
+storiesOf("Article", module).add("With Container", () => (
   <Article
     link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
     photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
