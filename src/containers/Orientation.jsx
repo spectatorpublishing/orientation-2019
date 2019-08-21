@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React, { Component } from 'react';
+import Article from '../components/Article';
 
 const Container = styled.div``;
 
@@ -27,6 +28,7 @@ export default class Orientation extends Component {
       <Container>
         <Row>
           <WelcomeColumn>
+            <Article>Test</Article>
             <WelcomeContainer>
               <div>
                 <h1>Welcome</h1>
