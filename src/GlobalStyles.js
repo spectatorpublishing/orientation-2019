@@ -1,23 +1,26 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Basic&display=swap')
   body,
   button {
-    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Basic', sans-serif; 
   }
   div {
     color: ${(props) => props.theme.darkGray};
   }
   h1 {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 3rem;
+    color: ${(props) => props.theme.black};
+    font-size: 7rem;
     font-weight: 800; 
+    font-family: 'Righteous', cursive;
     margin: 0;
   }
   h2 {
     color: ${(props) => props.theme.darkGray};
-    font-size: 1.7rem;
+    font-size: 4rem;
+    font-family: 'Righteous', cursive;
     font-weight: 700; 
     margin: 0;
   }
@@ -47,8 +50,9 @@ export const GlobalStyles = createGlobalStyle`
   }
   p {
     color: ${(props) => props.theme.darkGray};
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400; 
+    font-family: 'Basic', sans-serif;
     margin: 0;
   }
   b {
@@ -62,8 +66,6 @@ export const GlobalStyles = createGlobalStyle`
 export const theme = {
   black: '#000000',
   white: '#FFFFFF',
-  barnardBlue: '#00489A',
-  columbiaBlue: '#62A8E5',
   darkGray: '#555555',
   mediumGray: '#AAAAAA',
   lightGray: '#DDDDDD',

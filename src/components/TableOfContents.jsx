@@ -11,10 +11,10 @@ const Table = styled.div`
 `;
 const Container = styled.div`
   display: flex;
-  margin-top: 15vh; /*REMOVE THIS BEFORE INTEGRATION*/
   flex-direction: row;
   height: auto;
   width: auto;
+  margin-right: 4vw;
 `;
 
 const Border = styled.div`
@@ -23,7 +23,6 @@ const Border = styled.div`
   border: 2px solid;
   border-color: #f47263;
   border-radius: 10px;
-  margin-left: -0.5vw; /*THIS MAY BE AN ISSUE*/
 `;
 
 const TableEntry = styled.div`
@@ -73,7 +72,7 @@ export default class TableOfContents extends Component {
                     this.changeTextColor(linkUrL, false);
                   }}
                 >
-                  {entry}
+                  {<p>{entry}</p>}
                 </Link>
               </TableEntry>
             );

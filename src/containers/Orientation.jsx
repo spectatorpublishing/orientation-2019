@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React, { Component } from 'react';
+import TableOfContents from '../components/TableOfContents';
 
 const Container = styled.div``;
 
@@ -7,7 +8,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 30rem;
+  height: 75vh;
   overflow: hidden;
 `;
 
@@ -21,25 +22,19 @@ const WelcomeContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  padding: 1.8rem;
-  background-color: red;
+  padding: 5rem;
 `;
 
 const TableOfContentsPlaceholder = styled.div`
   display: flex;
   flex: 1;
-  background-color: blue;
-  color: white;
   width: 100%;
   justify-content: flex-end;
-  padding: 1.8rem;
 `;
 
 const OrientationImageContainer = styled.div`
-  margin-left: 3.5rem;
   width: 100%;
   height: 100%;
-  background-color: purple;
 `;
 const OrientationImage = styled.img`
   object-fit: cover;
@@ -47,8 +42,13 @@ const OrientationImage = styled.img`
   min-height: 100%;
 `;
 
+const Italicized = styled.p`
+  font-style: italic;
+`;
+
 const tempUrl = 'https://d.newsweek.com/en/full/465055/05-31-nayla-kidd-columbia-01.jpg';
 
+const entries = ['welcome'];
 export default class Orientation extends Component {
   constructor(props) {
     super(props);
@@ -58,17 +58,19 @@ export default class Orientation extends Component {
   render() {
     return (
       <Container>
-        <Row>
+        <Row id={entries[0]}>
           <WelcomeColumn>
             <WelcomeContainer>
               <div>
                 <h1>Welcome</h1>
                 <h2>Class of 2023</h2>
-                <p>Select an option below to explore your orientation guide</p>
+                <Italicized>
+                  Select an option below to explore your orientation guide
+                </Italicized>
               </div>
             </WelcomeContainer>
             <TableOfContentsPlaceholder>
-              <h2>Table of Contents</h2>
+              <TableOfContents entries={entries} />
             </TableOfContentsPlaceholder>
           </WelcomeColumn>
           <WelcomeColumn>
