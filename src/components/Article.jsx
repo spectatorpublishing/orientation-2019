@@ -1,9 +1,11 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Container = styled.div`
+const Container = styled.a`
+  display: block;
   width: 15rem;
+  text-decoration: none;
 `;
 
 const Headline = styled.h4`
@@ -17,12 +19,8 @@ const Image = styled.img`
 function Article({
   link, photoAlt, photoUrl, headline,
 }) {
-  const handleClick = useCallback(() => {
-    window.open(link);
-  }, [link]);
-
   return (
-    <Container onClick={handleClick}>
+    <Container href={link} target="_blank">
       <Image alt={photoAlt} src={photoUrl} />
       <Headline>{headline}</Headline>
     </Container>
