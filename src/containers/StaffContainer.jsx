@@ -28,7 +28,7 @@ const StaffInfo = {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   background: #106e75;
   position: relative;
   padding: 3rem;
@@ -40,6 +40,7 @@ const Row = styled.div`
   width: 100%;
   padding: 0.5rem;
   align-items: flex-start;
+  justify-content: space-between;
 `;
 
 const TitleContainer = styled.div`
@@ -52,9 +53,8 @@ const Title = styled.h1`
 `;
 
 const ImageContainer = styled.div`
-  margin: 0.5rem;
-  width: 72%;
-  padding: 0.8rem;
+  width: vw;
+  padding: 1.5rem;
 `;
 
 const Image = styled.img`
@@ -72,7 +72,7 @@ const LastRowTextSection = styled.div`
   flex-direction: row;
   width: 100%;
   align-items: flex-start;
-  padding: 0.5rem 0rem;
+  padding-bottom: 1rem;
 `;
 
 const StaffContainer = (props) => {
@@ -139,8 +139,20 @@ const StaffContainer = (props) => {
               title={StaffInfo.titles[1]}
               members={StaffInfo.members[1]}
             />
+            <SectionTitle
+              title={StaffInfo.titles[0]}
+              members={StaffInfo.members[0]}
+            />
           </LastRowTextSection>
           <LastRowTextSection>
+            <SectionTitle
+              title={StaffInfo.titles[0]}
+              members={StaffInfo.members[0]}
+            />
+            <SectionTitle
+              title={StaffInfo.titles[1]}
+              members={StaffInfo.members[1]}
+            />
             <SectionTitle
               title={StaffInfo.titles[0]}
               members={StaffInfo.members[0]}
