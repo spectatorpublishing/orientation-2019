@@ -67,6 +67,13 @@ const LastRow = styled.div`
   flex-direction: column;
 `;
 
+const LastRowTextSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+`;
+
 const StaffContainer = (props) => {
   const { url, alt } = props;
   return (
@@ -122,7 +129,7 @@ const StaffContainer = (props) => {
       </Row>
       <Row>
         <LastRow>
-          <Row>
+          <LastRowTextSection>
             <SectionTitle
               title={StaffInfo.titles[0]}
               members={StaffInfo.members[0]}
@@ -131,8 +138,8 @@ const StaffContainer = (props) => {
               title={StaffInfo.titles[1]}
               members={StaffInfo.members[1]}
             />
-          </Row>
-          <Row>
+          </LastRowTextSection>
+          <LastRowTextSection>
             <SectionTitle
               title={StaffInfo.titles[0]}
               members={StaffInfo.members[0]}
@@ -141,7 +148,7 @@ const StaffContainer = (props) => {
               title={StaffInfo.titles[1]}
               members={StaffInfo.members[1]}
             />
-          </Row>
+          </LastRowTextSection>
         </LastRow>
         <ImageContainer>
           <Image src={url} alt={alt} />
