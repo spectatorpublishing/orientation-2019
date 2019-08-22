@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Basic&display=swap')
+  @import url('https://fonts.googleapis.com/css?family=Basic&display=swap');
   body,
   button {
     font-family: 'Basic', sans-serif; 
@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   h2 {
     color: ${(props) => props.theme.darkGray};
-    font-size: 4rem;
+    font-size: 4.3rem;
     font-family: 'Righteous', cursive;
     font-weight: 700; 
     margin: 0;
@@ -50,7 +50,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   p {
     color: ${(props) => props.theme.darkGray};
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400; 
     font-family: 'Basic', sans-serif;
     margin: 0;

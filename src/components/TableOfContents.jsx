@@ -6,15 +6,15 @@ import PropTypes from 'prop-types';
 const Table = styled.div`
   display: flex;
   flex-direction: column;
-  height: 65vh;
-  width: 25vw;
 `;
 const Container = styled.div`
   display: flex;
   flex-direction: row;
   height: auto;
   width: auto;
+  margin-top: 5vh;
   margin-right: 4vw;
+  justify-content: flex-end;
 `;
 
 const Border = styled.div`
