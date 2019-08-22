@@ -8,7 +8,7 @@ const Container = styled.div``;
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  height: 100vh;
 `;
 
 const Column = styled.div`
@@ -33,9 +33,13 @@ const OrientationImage = styled.img`
 `;
 
 const Italicized = styled.p`
-  margin-left: 0.7rem;
   margin-top: 0.5rem;
   font-style: italic;
+  font-size: 200;
+`;
+
+const Subtitle = styled.h2`
+  margin-top: -2vh;
 `;
 
 const tempUrl = 'https://d.newsweek.com/en/full/465055/05-31-nayla-kidd-columbia-01.jpg';
@@ -47,8 +51,8 @@ const WelcomeContainer = (props) => {
       <Row>
         <Column>
           <TextContainer>
-            <h1>Welcome</h1>
-            <h2>Class of 2023</h2>
+            <h1>WELCOME</h1>
+            <Subtitle>CLASS OF 2023</Subtitle>
             <Italicized>
               Select an option below to explore your orientation guide
             </Italicized>

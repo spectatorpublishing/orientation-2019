@@ -6,7 +6,7 @@ const MemberItem = styled.h4`
   text-align: left;
   color: white;
 `;
-const Title = styled.h2`
+const Title = styled.h3`
   text-align: left;
   margin-bottom: 0.6rem;
   color: white;

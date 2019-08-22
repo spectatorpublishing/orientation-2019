@@ -46,7 +46,7 @@ const TitleContainer = styled.div`
   text-align: center;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   color: white;
 `;
 
