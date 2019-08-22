@@ -8,8 +8,7 @@ const Container = styled.div`
   flex-direction: row;
   flex-wrap: no-wrap;
   justify-content: space-around;
-  margin: 3rem;
-  margin-right: 3rem;
+  margin: 1.5rem;
 `;
 
 const BannerRow = (props) => {

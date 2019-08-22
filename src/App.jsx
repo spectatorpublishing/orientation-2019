@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import Orientation from './containers/Orientation';
 import { GlobalStyles, theme } from './GlobalStyles';
 import BannerRow from './containers/BannerRow';
+import StaffContainer from './containers/StaffContainer';
 
 const BannerRowDemo = [
   {
@@ -26,7 +27,6 @@ const BannerRowDemo = [
     color: '#9BDAE3',
   },
 ];
-import StaffContainer from './containers/StaffContainer';
 
 const StaffContainerDemo = {
   url:
