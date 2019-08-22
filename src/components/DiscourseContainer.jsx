@@ -19,7 +19,7 @@ const TextContainer = styled.div`
   padding: 0.5rem;
 `;
 
-const Header = styled.h2`
+const Header = styled.h3`
   text-transform: uppercase;
 `;
 
