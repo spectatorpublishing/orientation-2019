@@ -1,0 +1,80 @@
+{
+  "name": "orientation-2019",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@storybook/react": "^5.1.11",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^6.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^1.2.2",
+    "react-scripts": "3.1.1",
+    "styled-components": "^4.3.2",
+    "webpack": "4.39.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "lint": "lint-staged",
+    "eslint": "eslint --ext .jsx --ext .js src",
+    "stylelint": "stylelint \"**/*.css\" \"**/*.js\" \"**/*.jsx\""
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.jsx": [
+      "prettier --write",
+      "eslint --fix",
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.css": "stylelint --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "lint-staged": "^9.2.3",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
+  }
+}
