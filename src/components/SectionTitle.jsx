@@ -6,16 +6,15 @@ const MemberItem = styled.h4`
   text-align: left;
   color: white;
 `;
-const Title = styled.h2`
+const Title = styled.h3`
   text-align: left;
-  padding-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
   color: white;
 `;
 const Container = styled.div`
   text-align: left;
-  padding: 1rem;
+  margin: 0.5rem;
   background: #106e75;
-  width: 9rem;
 `;
 const SectionTitle = (props) => {
   const { title, members } = props;

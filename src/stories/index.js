@@ -3,19 +3,35 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import SectionTitle from "../components/SectionTitle.jsx";
+import BannerButton from "../components/BannerButton.jsx";
 import MapsList from "../components/MapsList.jsx";
 import Article from "../components/Article";
 import DiscourseContainer from "../components/DiscourseContainer";
 
-const sectionComponentDemo = {
+const sectionDemo = {
   title: "demo title",
   members: ["name1, position1", "name2, position2", "name3, position3"]
 };
 
+const bannerButtonDemo = {
+  title: "demo title",
+  url: "https://www.columbiaspectator.com",
+  color: "#f1bc9c",
+  shadowColor: "#f26d5b",
+  textColor: "#174d5b"
+};
+
 storiesOf("Section", module).add("with member information", () => (
-  <SectionTitle
-    title={sectionComponentDemo.title}
-    members={sectionComponentDemo.members}
+  <SectionTitle title={sectionDemo.title} members={sectionDemo.members} />
+));
+
+storiesOf("Banner Button", module).add("go to url in new tab on click", () => (
+  <BannerButton
+    title={bannerButtonDemo.title}
+    url={bannerButtonDemo.url}
+    color={bannerButtonDemo.color}
+    shadowColor={bannerButtonDemo.shadowColor}
+    textColor={bannerButtonDemo.textColor}
   />
 ));
 

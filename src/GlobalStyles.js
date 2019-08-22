@@ -1,30 +1,42 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'HalloEuroboy';
+    src: url('https://spectator-fonts.s3.amazonaws.com/HalloEuroboy.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
   body,
   button {
-    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
-    font-family: 'Raleway', sans-serif;
+    @import url('https://fonts.googleapis.com/css?family=Basic&display=swap');
+    font-family: 'Basic', sans-serif;
   }
   div {
     color: ${(props) => props.theme.darkGray};
   }
   h1 {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 3rem;
-    font-weight: 800; 
+    color: ${(props) => props.theme.black};
+    font-family: 'HalloEuroboy', sans-serif;
+    font-size: 8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
     margin: 0;
   }
   h2 {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 1.7rem;
-    font-weight: 700; 
+    color: ${(props) => props.theme.black};
+    font-family: 'HalloEuroboy', sans-serif;
+    font-size: 4.9rem;
+    font-weight: 300;
+    letter-spacing: 0.07em;
     margin: 0;
   }
   h3 {
     color: ${(props) => props.theme.darkGray};
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-family: 'HalloEuroboy', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.06em;
     margin: 0;
   }
   h4 {
@@ -46,15 +58,15 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   p {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 1rem;
+    color: ${(props) => props.theme.black};
+    font-size: 1.4rem;
     font-weight: 400; 
     margin: 0;
   }
   b {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 1rem;
-    font-weight: 700; 
+    color: ${(props) => props.theme.black};
+    font-size: 1.4rem;
+    font-weight: 700;  
     margin: 0;
   }
 `;
