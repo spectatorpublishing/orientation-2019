@@ -7,9 +7,10 @@ const Container = styled.div`
   width: 22vw;
   height: 33vw;
   position: relative;
-  @media (max-width: 1081px) {
-    width: 41rem;
-    height: 11rem;
+
+  @media (max-width: 576px) {
+    width: 31rem;
+    height: 9rem;
     margin: 0.5rem 0rem;
   }
 `;
@@ -22,12 +23,12 @@ const Box = styled.div`
   width: 21vw;
   height: 32vw;
   position: absolute;
-  top: 0.7rem;
+  top: 1.5vw;
   background: ${(props) => props.color};
 
-  @media (max-width: 1081px) {
-    width: 40rem;
-    height: 10rem;
+  @media (max-width: 576px) {
+    width: 30rem;
+    height: 8rem;
   }
 `;
 
@@ -37,12 +38,12 @@ const BoxShadow = styled.div`
   width: 21vw;
   height: 32vw;
   position: absolute;
-  left: 0.5rem;
+  left: 0.3rem;
   border-color: ${(props) => props.shadowColor};
 
-  @media (max-width: 1081px) {
-    width: 40rem;
-    height: 10rem;
+  @media (max-width: 576px) {
+    width: 29.7rem;
+    height: 7.7rem;
   }
 `;
 

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 const Container = styled.a`
   display: block;
-  width: 15rem;
   text-decoration: none;
 `;
 
