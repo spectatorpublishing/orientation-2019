@@ -26,6 +26,13 @@ const BannerRowDemo = [
     color: '#9BDAE3',
   },
 ];
+import StaffContainer from './containers/StaffContainer';
+
+const StaffContainerDemo = {
+  url:
+    'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350',
+  alt: 'staff photo',
+};
 
 function App() {
   return (
@@ -34,6 +41,11 @@ function App() {
         <GlobalStyles />
         <Orientation />
         <BannerRow buttons={BannerRowDemo} />
+        <StaffContainer
+          url={StaffContainerDemo.url}
+          alt={StaffContainerDemo.alt}
+        />
+        {/* temporarily all the staff info data are stored inside its own file */}
       </div>
     </ThemeProvider>
   );
