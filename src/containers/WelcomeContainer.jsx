@@ -1,9 +1,18 @@
-import styled from 'styled-components';
-import React from 'react';
-import PropTypes from 'prop-types';
-import TableOfContents from '../components/TableOfContents';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { Desktop, MobileAndTablet } from "react-responsive-simple";
+import TableOfContents from "../components/TableOfContents";
+import { theme } from "../GlobalStyles";
 
-const Container = styled.div``;
+const tempUrl =
+  "https://d.newsweek.com/en/full/465055/05-31-nayla-kidd-columbia-01.jpg";
+
+const Container = styled.div`
+  @media (max-width: ${theme.medium}) {
+    background-image: url(${tempUrl});
+  }
+`;
 
 const Row = styled.div`
   display: flex;
@@ -20,6 +29,10 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 3.5vh 5vw 0vh 5vw;
+  @media (max-width: ${theme.medium}) {
+    margin-top: 0vh;
+    text-align: center;
+  }
 `;
 
 const OrientationImageContainer = styled.div`
@@ -38,39 +51,63 @@ const Italicized = styled.p`
   font-size: 200;
 `;
 
-const Subtitle = styled.h2`
-  margin-top: -2vh;
+const Title = styled.h1`
+  @media (max-width: ${theme.medium}) {
+    margin-top: 20vh;
+    font-size: 5rem;
+  }
 `;
 
-const tempUrl = 'https://d.newsweek.com/en/full/465055/05-31-nayla-kidd-columbia-01.jpg';
+const Subtitle = styled.h2`
+  margin-top: -2vh;
+  @media (max-width: ${theme.medium}) {
+    font-size: 4rem;
+  }
+`;
 
-const WelcomeContainer = (props) => {
+const WelcomeContainer = props => {
   const { tocEntries } = props;
   return (
-    <Container>
-      <Row>
-        <Column>
+    <>
+      <Desktop>
+        <Container>
+          <Row>
+            <Column>
+              <TextContainer>
+                <Title>WELCOME</Title>
+                <Subtitle>CLASS OF 2023</Subtitle>
+                <Italicized>
+                  Select an option below to explore your orientation guide
+                </Italicized>
+              </TextContainer>
+              <TableOfContents entries={tocEntries} />
+            </Column>
+            <Column>
+              <OrientationImageContainer>
+                <OrientationImage src={tempUrl} />
+              </OrientationImageContainer>
+            </Column>
+          </Row>
+        </Container>
+      </Desktop>
+      <MobileAndTablet>
+        <Container>
           <TextContainer>
-            <h1>WELCOME</h1>
+            <Title>WELCOME</Title>
             <Subtitle>CLASS OF 2023</Subtitle>
             <Italicized>
               Select an option below to explore your orientation guide
             </Italicized>
           </TextContainer>
           <TableOfContents entries={tocEntries} />
-        </Column>
-        <Column>
-          <OrientationImageContainer>
-            <OrientationImage src={tempUrl} />
-          </OrientationImageContainer>
-        </Column>
-      </Row>
-    </Container>
+        </Container>
+      </MobileAndTablet>
+    </>
   );
 };
 
 WelcomeContainer.propTypes = {
-  tocEntries: PropTypes.arrayOf.isRequired,
+  tocEntries: PropTypes.arrayOf.isRequired
 };
 
 export default WelcomeContainer;
