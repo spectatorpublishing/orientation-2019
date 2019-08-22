@@ -34,14 +34,14 @@
   ],
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
       "prettier --write",
+      "eslint --fix",
       "stylelint --fix",
       "git add"
     ],
     "*.jsx": [
-      "eslint --fix",
       "prettier --write",
+      "eslint --fix",
       "stylelint --fix",
       "git add"
     ],
