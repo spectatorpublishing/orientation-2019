@@ -7,7 +7,6 @@ import BannerButton from "../components/BannerButton.jsx";
 import MapsList from "../components/MapsList.jsx";
 import Article from "../components/Article";
 
-
 const sectionDemo = {
   title: "demo title",
   members: ["name1, position1", "name2, position2", "name3, position3"]
@@ -15,15 +14,25 @@ const sectionDemo = {
 
 const bannerButtonDemo = {
   title: "demo title",
-  url: "https://www.columbiaspectator.com"
+  url: "https://www.columbiaspectator.com",
+  color: "#f1bc9c",
+  shadowColor: "#f26d5b",
+  textColor: "#174d5b"
 };
+
 
 storiesOf("Section", module).add("with member information", () => (
   <SectionTitle title={sectionDemo.title} members={sectionDemo.members} />
 ));
 
 storiesOf("Banner Button", module).add("go to url in new tab on click", () => (
-  <BannerButton title={bannerButtonDemo.title} url={bannerButtonDemo.url} /> 
+  <BannerButton
+    title={bannerButtonDemo.title}
+    url={bannerButtonDemo.url}
+    color={bannerButtonDemo.color}
+    shadowColor={bannerButtonDemo.shadowColor}
+    textColor={bannerButtonDemo.textColor}
+  />
 ));
 
 const dataUrl = { name: "places to hang out", url: "/dummyurl" };
