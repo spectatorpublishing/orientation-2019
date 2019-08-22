@@ -4,26 +4,23 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { slide as Menu } from 'react-burger-menu';
 import { Desktop, MobileAndTablet } from 'react-responsive-simple';
-
-const theme = require('../GlobalStyles');
+import { theme } from '../GlobalStyles';
 
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: inline-row;
   height: 6vh;
-  width: 100vw;
   background: black;
   justify-content: space-around;
   align-items: center;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.large}) {
     display: flex;
     align-items: center;
     height: 60px;
-    width: 100vw;
   }
 
-  @media only screen and (max-height: 992px) {
+  @media only screen and (max-height: ${theme.large}) {
     height: 60px;
   }
 `;
@@ -56,7 +53,7 @@ const ColumbiaSpectator = styled.div`
   height: 6vh;
   width: 16vw;
 
-  @media only screen and (max-height: 992px) {
+  @media only screen and (max-height: ${theme.large}) {
     height: 60px;
   }
 `;

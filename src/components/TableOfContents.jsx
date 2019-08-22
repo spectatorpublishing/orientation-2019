@@ -65,7 +65,7 @@ const TableOfContents = (props) => {
                   changeTextColor(linkUrL, false);
                 }}
               >
-                {entry}
+                <p>{entry}</p>
               </Link>
             </TableEntry>
           );
