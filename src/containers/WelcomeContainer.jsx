@@ -67,7 +67,7 @@ const Subtitle = styled.h2`
 const WelcomeContainer = (props) => {
   const { tocEntries } = props;
   return (
-    <frag>
+    <>
       <Desktop>
         <Container>
           <Row>
@@ -101,7 +101,7 @@ const WelcomeContainer = (props) => {
           <TableOfContents entries={tocEntries} />
         </Container>
       </MobileAndTablet>
-    </frag>
+    </>
   );
 };
 
