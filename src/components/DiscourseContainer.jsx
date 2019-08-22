@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const OuterContainer = styled.div`
-  margin: auto 3rem;
+  margin: auto 3vw;
 `;
 
 const InnerContainer = styled.div`
@@ -12,19 +12,44 @@ const InnerContainer = styled.div`
   margin-top: 5rem;
 `;
 
-const TextContainer = styled.div`
+const DesktopTextContainer = styled.div`
   box-sizing: border-box;
-  display: block;
+  display: none;
   max-width: 40%;
   padding: 0.5rem;
+
+  @media only screen and (min-width: ${(props) => props.theme.small}) {
+    display: block;
+  }
+`;
+
+const MobileTextContainer = styled.div`
+  box-sizing: border-box;
+  display: none;
+  margin: auto 1rem;
+
+  @media only screen and (max-width: ${(props) => props.theme.small}) {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 const Header = styled.h3`
   text-transform: uppercase;
+
+  @media only screen and (max-width: ${(props) => props.theme.small}) {
+    font-size: 15vw; /* Will change with font change */
+    margin-right: -20vw; /* Will change with font change */
+  }
 `;
 
 const Description = styled.p`
   font-style: italic;
+
+  @media only screen and (max-width: ${(props) => props.theme.small}) {
+    font-size: 4vw; /* Will change with font change */
+    transform: translateY(0.8rem); /* Will change with font change */
+  }
 `;
 
 const ArticleContainer = styled.div`
@@ -45,6 +70,14 @@ const ArticleContainer = styled.div`
       padding: 1rem;
       flex: 1 1 25%;
       min-width: 10rem;
+
+      @media only screen and (max-width: ${(props) => props.theme.small}) {
+        min-width: 5rem;
+
+        &:last-child {
+          padding-left: 0;
+        }
+      }
     }
   }
 `;
@@ -57,11 +90,15 @@ function DiscourseContainer({ children }) {
 
   return (
     <OuterContainer>
+      <MobileTextContainer>
+        <Header>Join the discourse</Header>
+        <Description>the hottest topics on campus</Description>
+      </MobileTextContainer>
       <InnerContainer>
-        <TextContainer>
+        <DesktopTextContainer>
           <Header>Join the discourse</Header>
           <Description>the hottest topics on campus</Description>
-        </TextContainer>
+        </DesktopTextContainer>
         <ArticleContainer>
           {articlePairs.map((articlePair) => (
             <div>{articlePair}</div>
