@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const OuterContainer = styled.div``;
+const OuterContainer = styled.div`
+  margin: auto 3rem;
+`;
 
 const InnerContainer = styled.div`
   display: flex;
