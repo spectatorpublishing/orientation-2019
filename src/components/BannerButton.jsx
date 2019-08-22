@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 // the dimensions of Container are 1 + dimensions of Box
 const Container = styled.div`
-  width: 17rem;
-  height: 25rem;
+  width: 19rem;
+  height: 28rem;
   position: relative;
 `;
 
@@ -14,8 +14,8 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16rem;
-  height: 24rem;
+  width: 18rem;
+  height: 27rem;
   position: absolute;
   top: 0.7rem;
   background: ${(props) => props.color};
@@ -24,14 +24,14 @@ const Box = styled.div`
 // here dimensions are set to offset the size of the border
 const BoxShadow = styled.div`
   border: 0.3rem solid;
-  width: 15.7rem;
-  height: 23.7rem;
+  width: 17.7rem;
+  height: 26.7rem;
   position: absolute;
   left: 0.7rem;
   border-color: ${(props) => props.shadowColor};
 `;
 
-const Title = styled.h1`
+const Title = styled.h3`
   padding: 3rem;
   color: ${(props) => props.textColor};
 `;
@@ -70,7 +70,7 @@ BannerButton.propTypes = {
 BannerButton.defaultProps = {
   color: '#f1bc9c',
   shadowColor: '#f26d5b',
-  textColor: '#174d5b',
+  textColor: 'white',
 };
 
 export default BannerButton;
