@@ -29,17 +29,15 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  flex: 1;
   background: #106e75;
-  position: relative;
-  padding: 3rem;
 `;
 
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
-  padding: 0.5rem;
   align-items: flex-start;
+  margin: 5vh 5vw 0vh 5vw;
   justify-content: space-between;
 `;
 
@@ -53,7 +51,6 @@ const Title = styled.h1`
 `;
 
 const ImageContainer = styled.div`
-  width: vw;
   padding: 1.5rem;
 `;
 

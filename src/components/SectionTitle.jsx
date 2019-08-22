@@ -8,12 +8,12 @@ const MemberItem = styled.h4`
 `;
 const Title = styled.h2`
   text-align: left;
-  padding-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
   color: white;
 `;
 const Container = styled.div`
   text-align: left;
-  padding: 0.5rem;
+  margin: 0.5rem;
   background: #106e75;
 `;
 const SectionTitle = (props) => {
