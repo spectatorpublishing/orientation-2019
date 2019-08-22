@@ -70,7 +70,7 @@ BannerButton.propTypes = {
 BannerButton.defaultProps = {
   color: '#f1bc9c',
   shadowColor: '#f26d5b',
-  textColor: '#174d5b',
+  textColor: 'white',
 };
 
 export default BannerButton;
