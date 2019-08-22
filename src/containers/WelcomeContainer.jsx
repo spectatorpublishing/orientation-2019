@@ -1,12 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import { Desktop, MobileAndTablet } from "react-responsive-simple";
-import TableOfContents from "../components/TableOfContents";
-import { theme } from "../GlobalStyles";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Desktop, MobileAndTablet } from 'react-responsive-simple';
+import TableOfContents from '../components/TableOfContents';
+import { theme } from '../GlobalStyles';
 
-const tempUrl =
-  "https://d.newsweek.com/en/full/465055/05-31-nayla-kidd-columbia-01.jpg";
+const tempUrl = 'https://d.newsweek.com/en/full/465055/05-31-nayla-kidd-columbia-01.jpg';
 
 const Container = styled.div`
   @media (max-width: ${theme.medium}) {
@@ -65,7 +64,7 @@ const Subtitle = styled.h2`
   }
 `;
 
-const WelcomeContainer = props => {
+const WelcomeContainer = (props) => {
   const { tocEntries } = props;
   return (
     <>
@@ -107,7 +106,7 @@ const WelcomeContainer = props => {
 };
 
 WelcomeContainer.propTypes = {
-  tocEntries: PropTypes.arrayOf.isRequired
+  tocEntries: PropTypes.arrayOf.isRequired,
 };
 
 export default WelcomeContainer;

@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import React, { Component } from "react";
-import { HashLink as Link } from "react-router-hash-link";
-import PropTypes from "prop-types";
-import { theme } from "../GlobalStyles";
+import styled from 'styled-components';
+import React, { Component } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const Table = styled.div`
   display: flex;
@@ -55,9 +55,9 @@ export default class TableOfContents extends Component {
   changeTextColor = (id, isActive) => {
     const entry = document.getElementById(id);
     if (isActive) {
-      entry.style.color = "#F47263";
+      entry.style.color = '#F47263';
     } else {
-      entry.style.color = "black";
+      entry.style.color = 'black';
     }
   };
 
@@ -66,7 +66,7 @@ export default class TableOfContents extends Component {
     return (
       <Container>
         <Table>
-          {entries.map(entry => {
+          {entries.map((entry) => {
             const linkUrL = `#${entry}`;
             return (
               <TableEntry>
@@ -74,8 +74,8 @@ export default class TableOfContents extends Component {
                   smooth
                   to={linkUrL}
                   style={{
-                    textDecorationLine: "none",
-                    transition: "color .2s"
+                    textDecorationLine: 'none',
+                    transition: 'color .2s',
                   }}
                   id={linkUrL}
                   onMouseEnter={() => {
@@ -98,9 +98,9 @@ export default class TableOfContents extends Component {
 }
 
 TableOfContents.propTypes = {
-  entries: PropTypes.arrayOf(PropTypes.string)
+  entries: PropTypes.arrayOf(PropTypes.string),
 };
 
 TableOfContents.defaultProps = {
-  entries: null
+  entries: null,
 };
