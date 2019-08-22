@@ -9,7 +9,6 @@ const Container = styled.div`
   flex-wrap: no-wrap;
   justify-content: space-around;
   margin: 1.5rem;
-
   @media (max-width: 1081px) {
     flex-wrap: wrap;
   }
