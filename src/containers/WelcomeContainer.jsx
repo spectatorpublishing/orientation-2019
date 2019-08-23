@@ -5,13 +5,14 @@ import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import TableOfContents from '../components/TableOfContents';
 import { theme } from '../GlobalStyles';
 
-const tempUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/KPXXJFOVYRHR5HPKJ76CND2574.jpg';
+const photoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/KPXXJFOVYRHR5HPKJ76CND2574.jpg';
+const opaqueUrl = 'https://spectator.arcpublishing.com/photo/resize/6OpqLabVVWxuYjOPt8GHrrT9CIE=/arc-anglerfish-arc2-prod-spectator/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg';
 
 const Container = styled.div`
   height: 100vh;
   @media (max-width: ${theme.medium}) {
     height: auto;
-    background-image: url(${tempUrl});
+    background-image: url(${opaqueUrl});
   }
 `;
 
@@ -85,7 +86,7 @@ const WelcomeContainer = (props) => {
             </Column>
             <Column>
               <OrientationImageContainer>
-                <OrientationImage src={tempUrl} />
+                <OrientationImage src={photoUrl} />
               </OrientationImageContainer>
             </Column>
           </Row>
