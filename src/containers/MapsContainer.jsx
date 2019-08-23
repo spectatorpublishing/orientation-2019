@@ -1,64 +1,77 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import LinksList from '../components/LinksList';
+import mapsData from '../data/MapsData';
+import { theme } from '../GlobalStyles';
 
 const Row = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  align-items: stretch;
+  margin: 5vh 0;
+
+  @media only screen and (max-width: ${(props) => props.theme.medium}) {
+    flex-direction: column-reverse;
+  }
 `;
 
-const dataUrl = { name: 'places to hang out', url: '/dummyurl' };
+const MapsList = styled.div`
+  flex: 1 1 40%;
+  padding: 2rem;
+  border: 1rem;
+  box-sizing: border-box;
+  & p {
+    color: white;
+  }
+  background: ${theme.yellow};
+`;
 
-const rightData = [
-  dataUrl,
-  dataUrl,
-  dataUrl,
-  dataUrl,
-  dataUrl,
-  dataUrl,
-  dataUrl,
-];
-const leftData = [
-  dataUrl,
-  dataUrl,
-  dataUrl,
-  dataUrl,
-  dataUrl,
-  dataUrl,
-  dataUrl,
-];
-
-const mapsTitle = 'MAPS';
-const mapsDescription = 'explore places on and around campus';
-
-const referralTitle = 'TEXTBOOKS';
-const referralDescription = 'find great deals for freshmen textbooks';
+const MapDisplay = styled.div`
+  flex: 1 1 60%;
+  & iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+  }
+`;
 
 export default class MapsContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { currentMap: mapsData[0].link };
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+
+  handleSelect(i) {
+    this.setState({
+      currentMap: mapsData.find(
+        ({ name }) => i.currentTarget.textContent === name,
+      ).link,
+    });
   }
 
   render() {
+    const { currentMap } = this.state;
     return (
-      <div>
-        <Row>
-          <LinksList
-            leftList={leftData}
-            rightList={rightData}
-            title={mapsTitle}
-            description={mapsDescription}
-          />
-          <LinksList
-            leftList={leftData}
-            rightList={rightData}
-            title={referralTitle}
-            description={referralDescription}
-          />
-        </Row>
-      </div>
+      <Row>
+        <MapsList>
+          {mapsData.map(({ name }, i) => (
+            <div
+              key={name}
+              onClick={this.handleSelect}
+              onKeyDown={this.handleClick}
+              role="button"
+              tabIndex={i}
+            >
+              <p>{name}</p>
+            </div>
+          ))}
+        </MapsList>
+        <MapDisplay>
+          <iframe title="map-iframe" src={currentMap} />
+        </MapDisplay>
+      </Row>
     );
   }
 }
