@@ -10,6 +10,7 @@ const tempUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/pub
 const Container = styled.div`
   height: 100vh;
   @media (max-width: ${theme.medium}) {
+    height: auto;
     background-image: url(${tempUrl});
   }
 `;
