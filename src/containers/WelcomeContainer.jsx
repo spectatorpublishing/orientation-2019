@@ -6,7 +6,7 @@ import TableOfContents from '../components/TableOfContents';
 import { theme } from '../GlobalStyles';
 
 const photoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/KPXXJFOVYRHR5HPKJ76CND2574.jpg';
-const opaqueUrl = 'https://spectator.arcpublishing.com/photo/resize/6OpqLabVVWxuYjOPt8GHrrT9CIE=/arc-anglerfish-arc2-prod-spectator/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg';
+const opaqueUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg';
 
 const Container = styled.div`
   height: 100vh;
@@ -40,9 +40,10 @@ const TextContainer = styled.div`
 const OrientationImageContainer = styled.div`
   width: 100%;
   height: 100%;
+  overflow: hidden;
 `;
 const OrientationImage = styled.img`
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   min-height: 100%;
 `;
