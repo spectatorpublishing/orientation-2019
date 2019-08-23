@@ -16,16 +16,18 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-const Column = styled.div`
-  float: right;
+const ButtonContainer = styled.div`
+  direction: rtl;
+  margin-right: 6vw;
+  flex: 1 1 0;
 `;
 
 const Title = styled.h2`
-  margin-left: 4vw;
   text-shadow: -1px 3px white;
-  font-weight: bold;
   color: #e27400;
-  margin-top: 1rem;
+  font-size: 4rem;
+  flex: 1 1 0;
+  min-width: 20rem;
 `;
 
 const GetToKnow = (props) => {
@@ -33,10 +35,8 @@ const GetToKnow = (props) => {
   const Buttons = getToKnow.map((Hmm) => <Button getToKnow={Hmm} />);
   return (
     <Container backgroundImage={backgroundImage}>
-      <Column>
-        <Title>GET TO KNOW</Title>
-      </Column>
-      <Column>{Buttons}</Column>
+      <Title>GET TO KNOW</Title>
+      <ButtonContainer>{Buttons}</ButtonContainer>
     </Container>
   );
 };

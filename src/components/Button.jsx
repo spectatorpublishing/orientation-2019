@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 
 const Button = styled.a`
   position: relative;
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: space-evenly;
-  justify-content: center;
+  display: block;
   margin: 1rem;
   text-decoration: none;
 `;
@@ -21,8 +18,10 @@ const Inner = styled.div`
   background-color: white;
   color: #f57869;
   font-weight: bold;
+  font-size: 2rem;
+  display: inline-block;
   :before {
-    display: block;
+    display: inline-block;
     content: "";
     position: absolute;
     height: 100%;
