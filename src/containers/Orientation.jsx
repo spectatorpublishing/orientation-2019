@@ -7,6 +7,7 @@ import Article from '../components/Article';
 import Divider from '../components/Divider';
 import DividerWithNames from '../components/DividerWithNames';
 import GetToKnow from '../components/GetToKnow';
+import Carousel from '../components/Carousel';
 
 const tocEntries = [
   'Campus Life',
@@ -186,6 +187,26 @@ const getToKnow = [
   },
 ];
 
+const generateArticles = () => {
+  const slides = [];
+  for (let i = 0; i < 3; i += 1) {
+    const articleArr = [];
+
+    for (let j = 0; j < 4; j += 1) {
+      const article = {
+        href: i,
+        photoUrl:
+          'http://www.dumpaday.com/wp-content/uploads/2018/09/photos-21-3.jpg',
+        photoAlt: 'yeett',
+        headline: `Football kicks off season at Ivy League Media Day hosted by ESPN${i}${j}`,
+      };
+      articleArr.push(article);
+    }
+    slides.push(articleArr);
+  }
+  return slides;
+};
+
 const Orientation = () => (
   <div>
     <WelcomeContainer id="welcome" tocEntries={tocEntries} />
@@ -196,6 +217,7 @@ const Orientation = () => (
     />
     <GetToKnow getToKnow={getToKnow} backgroundImage={getToKnowImage} />
     <BannerRow buttons={BannerRowDemo} mobileButtons={MobileBannerRowDemo} />
+    <Carousel slides={generateArticles()} />
     <DiscourseContainer>
       <Article
         link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"

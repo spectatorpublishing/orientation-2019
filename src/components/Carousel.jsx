@@ -11,21 +11,20 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import Article from './Article';
-
-const ArticleWrapper = styled.div`
-  height: 10vh;
-  width: 20vw;
-  padding: 3vw;
-`;
-
-const ArticleWrapperMobile = styled.div`
-  width: 20vw;
-  height: 20vh;
-  padding: 3vw;
-`;
+import { theme } from '../GlobalStyles';
 
 const ArticleRowWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+
+  & > a {
+    box-sizing: border-box;
+    flex: 0 1 25%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 const ArrowContainer = styled.div`
@@ -35,20 +34,51 @@ const ArrowContainer = styled.div`
   padding-right: 5vw;
   width: 90vw;
   height: auto;
+
+  & > button {
+    height: 5vh;
+    width: 7vw;
+    margin: 0 5vw;
+    font-size: 1.4vw;
+    background: transparent;
+    border-radius: ${theme.borderRadius};
+    border-width: 0.1rem;
+    border-color: ${theme.purple};
+    color: ${theme.purple};
+
+    &:hover {
+      background: ${theme.purple};
+      color: white;
+    }
+  }
 `;
 
 const MobileArticleContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   width: 80vw;
 `;
 
-const SuperContainer = styled.div`
+const DesktopContainer = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-top: 8vh;
+  margin-bottom: 15vh;
+`;
+
+const MobileContainer = styled.div`
   display: flex;
   height: 100vh;
   width: 100vw;
   justify-content: center;
 `;
+
+const TitleContainer = styled.div`
+  margin-left: 3rem;
+  margin-bottom: -1vh;
+`;
+
+const Title = styled.h3``;
 
 const Carousel = (props) => {
   const { slides } = props;
@@ -56,52 +86,53 @@ const Carousel = (props) => {
   return (
     <div>
       <Desktop>
-        <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={30}
-          totalSlides={slides.length}
-          currentSlide={Math.floor(slides.length / 2)}
-        >
-          <Slider>
-            {slides.map((slide, i) => (
-              <Slide index={i}>
-                <ArticleRowWrapper>
-                  {slide.map((entry) => (
-                    <ArticleWrapper>
+        <DesktopContainer>
+          <TitleContainer>
+            <Title>Stories to Follow</Title>
+          </TitleContainer>
+          <CarouselProvider
+            naturalSlideWidth={100}
+            naturalSlideHeight={30}
+            totalSlides={slides.length}
+            currentSlide={Math.floor(slides.length / 2)}
+          >
+            <Slider>
+              {slides.map((slide, i) => (
+                <Slide index={i}>
+                  <ArticleRowWrapper>
+                    {slide.map((entry) => (
                       <Article
                         href={entry.href}
                         photoAlt={entry.photoAlt}
                         photoUrl={entry.photoUrl}
                         headline={entry.headline}
                       />
-                    </ArticleWrapper>
-                  ))}
-                </ArticleRowWrapper>
-              </Slide>
-            ))}
-          </Slider>
-          <ArrowContainer>
-            <ButtonBack>Back</ButtonBack>
-            <ButtonNext>Next</ButtonNext>
-          </ArrowContainer>
-        </CarouselProvider>
+                    ))}
+                  </ArticleRowWrapper>
+                </Slide>
+              ))}
+            </Slider>
+            <ArrowContainer>
+              <ButtonBack>Back</ButtonBack>
+              <ButtonNext>Next</ButtonNext>
+            </ArrowContainer>
+          </CarouselProvider>
+        </DesktopContainer>
       </Desktop>
 
       <MobileAndTablet>
-        <SuperContainer>
+        <MobileContainer>
           <MobileArticleContainer>
             {slides.map((slide) => slide.map((entry) => (
-              <ArticleWrapperMobile>
-                <Article
-                  href={entry.href}
-                  photoAlt={entry.photoAlt}
-                  photoUrl={entry.photoUrl}
-                  headline={entry.headline}
-                />
-              </ArticleWrapperMobile>
+              <Article
+                href={entry.href}
+                photoAlt={entry.photoAlt}
+                photoUrl={entry.photoUrl}
+                headline={entry.headline}
+              />
             )))}
           </MobileArticleContainer>
-        </SuperContainer>
+        </MobileContainer>
       </MobileAndTablet>
     </div>
   );
