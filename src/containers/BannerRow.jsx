@@ -21,7 +21,7 @@ const BannerRow = (props) => {
   const { buttons, mobileButtons } = props;
 
   return (
-    <>
+    <div>
       <Desktop>
         <Container>
           {buttons.map((button) => (
@@ -48,7 +48,7 @@ const BannerRow = (props) => {
           ))}
         </Container>
       </Mobile>
-    </>
+    </div>
   );
 };
 
