@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { theme } from '../GlobalStyles';
 
 // the dimensions of Container are 1 + dimensions of Box
 const Container = styled.div`
@@ -11,7 +12,7 @@ const Container = styled.div`
 
   @media (max-width: 992px) {
     width: 80vw;
-    height: 15vw;
+    height: 25vw;
   }
 `;
 
@@ -50,7 +51,11 @@ const BoxShadow = styled.div`
 
 const Title = styled.h3`
   padding: 3rem;
+  font-size: 3vw;
   color: ${(props) => props.textColor};
+  @media (max-width: ${theme.medium}) {
+    font-size: 1.2rem;
+  }
 `;
 
 const BannerButton = (props) => {
