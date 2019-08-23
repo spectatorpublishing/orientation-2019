@@ -46,8 +46,10 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   h5 {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 1rem;
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
+    font-family: 'Raleway', sans-serif;
+    color: ${(props) => props.theme.black};
+    font-size: 1.5rem;
     font-weight: 400; 
     margin: 0;
   }

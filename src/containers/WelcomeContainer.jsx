@@ -48,10 +48,10 @@ const OrientationImage = styled.img`
   min-height: 100%;
 `;
 
-const Italicized = styled.p`
+const Italicized = styled.h5`
   margin-top: 0.5rem;
   font-style: italic;
-  font-size: 200;
+  font-weight: lighter;
 `;
 
 const Title = styled.h1`

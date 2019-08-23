@@ -7,12 +7,15 @@ import Navbar from '../components/Navbar';
 import Article from '../components/Article';
 
 const tocEntries = [
-  'Get to know Barnumbia',
-  '116 Traditions',
+  'Campus Life',
+  'Academics',
+  'Courses We Loved',
+  '116 Things to do before Graduating',
+  'Get Your Textbooks',
   'Maps',
-  'Stories to Follow',
+  'Stories To Follow',
   'Join the Discourse',
-  'Join Spec',
+  'Spectator Staff',
 ];
 
 const BannerRowDemo = [

@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { theme } from '../GlobalStyles';
 
 const MemberItem = styled.h4`
   text-align: left;
   color: white;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.large}) {
     font-size: 2.2vh;
   }
 `;
@@ -17,9 +18,11 @@ const Title = styled.h3`
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 4.5vh;
+  height: 7.5vh;
+  line-height: 4.5vh;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.large}) {
     height: 7vh;
     line-height: 3.8vh;
     font-size: 3.9vh;
@@ -29,9 +32,9 @@ const Container = styled.div`
   text-align: left;
   padding: 0.7rem 0.6rem;
   background: #106e75;
-  flex: 1 1 15%;
+  flex: 1 1 18%;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.large}) {
     height: 15vh;
     padding: 1.1rem 0.7rem;
   }

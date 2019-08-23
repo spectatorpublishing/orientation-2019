@@ -16,11 +16,17 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: ${(props) => (props.mobile ? 'stretch' : 'flexStart')};
+  align-items: ${(props) => (props.mobile ? 'stretch' : 'flex-start')};
   justify-content: ${(props) => (props.mobile ? 'space-around' : 'center')};
   margin: 5vh 5vw 0vh 5vw;
   flex-wrap: wrap;
   width: ${(props) => (props.mobile ? '100%' : 'auto')};
+
+  &::after {
+    content: "";
+    flex: auto;
+    width: 52vw;
+  }
 `;
 
 const Col = styled.div`
@@ -28,6 +34,7 @@ const Col = styled.div`
   flex-direction: column;
   justify-content: center;
   flex: 1 1 30%;
+  text-align: center;
 `;
 
 const TitleContainer = styled.div`
