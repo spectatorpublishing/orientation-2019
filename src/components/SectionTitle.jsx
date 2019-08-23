@@ -7,14 +7,22 @@ const MemberItem = styled.h4`
   color: white;
 `;
 const Title = styled.h3`
-  text-align: left;
   margin-bottom: 0.6rem;
   color: white;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 2.5rem;
 `;
 const Container = styled.div`
   text-align: left;
-  margin: 0.5rem;
+  padding: 0.7rem 0.5rem;
   background: #106e75;
+  flex: 1 1 20%;
+  box-sizing: border-box;
 `;
 const SectionTitle = (props) => {
   const { title, members } = props;
