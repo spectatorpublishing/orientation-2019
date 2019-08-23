@@ -5,9 +5,10 @@ import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import TableOfContents from '../components/TableOfContents';
 import { theme } from '../GlobalStyles';
 
-const tempUrl = 'https://d.newsweek.com/en/full/465055/05-31-nayla-kidd-columbia-01.jpg';
+const tempUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/KPXXJFOVYRHR5HPKJ76CND2574.jpg';
 
 const Container = styled.div`
+  height: 100vh;
   @media (max-width: ${theme.medium}) {
     background-image: url(${tempUrl});
   }
