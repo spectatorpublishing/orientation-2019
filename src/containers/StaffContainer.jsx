@@ -16,6 +16,11 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+const SectionRow = styled.div`
+  display: flex;
+  flex-direction: row;
   align-items: ${(props) => (props.mobile ? 'stretch' : 'flex-start')};
   justify-content: ${(props) => (props.mobile ? 'space-around' : 'center')};
   margin: 5vh 5vw 0vh 5vw;
@@ -39,6 +44,8 @@ const Col = styled.div`
 
 const TitleContainer = styled.div`
   text-align: center;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Title = styled.h2`
@@ -57,7 +64,7 @@ const StaffContainer = (props) => {
               <Title>Staff</Title>
             </TitleContainer>
           </Row>
-          <Row mobile>
+          <SectionRow mobile>
             <Col>
               {staffInfo
                 .slice(0, Math.floor(staffInfo.length / 2))
@@ -72,7 +79,7 @@ const StaffContainer = (props) => {
                   <SectionTitle title={info.title} members={info.members} />
                 ))}
             </Col>
-          </Row>
+          </SectionRow>
         </Container>
       </MobileAndTablet>
 
@@ -83,11 +90,11 @@ const StaffContainer = (props) => {
               <Title>Staff</Title>
             </TitleContainer>
           </Row>
-          <Row>
+          <SectionRow>
             {staffInfo.map((info) => (
               <SectionTitle title={info.title} members={info.members} />
             ))}
-          </Row>
+          </SectionRow>
         </Container>
       </Desktop>
     </div>
