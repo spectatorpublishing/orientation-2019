@@ -15,22 +15,45 @@ const tocEntries = [
 
 const BannerRowDemo = [
   {
-    title: 'demo title 1',
+    title: 'COURSES WE LOVED',
     url: 'https://www.columbiaspectator.com/',
   },
   {
-    title: 'demo title 2',
+    title: 'PREPARE FOR COURSE REGISTRATION DOWNLOAD VERGIL+',
     url: 'https://www.columbiaspectator.com/',
     color: '#174d5b',
   },
   {
-    title: 'demo title 3',
+    title: '116 THINGS TO DO BEFORE GRADUATING',
     url: 'https://www.columbiaspectator.com/',
     color: '#f26d5b',
     shadowColor: '#f1bc9c',
   },
   {
-    title: 'demo title 4',
+    title: 'GET YOUR TEXTBOOKS',
+    url: 'https://www.columbiaspectator.com/',
+    color: '#9BDAE3',
+  },
+];
+
+const MobileBannerRowDemo = [
+  {
+    title: 'COURSES WE LOVED',
+    url: 'https://www.columbiaspectator.com/',
+  },
+  {
+    title: 'DOWNLOAD VERGIL+',
+    url: 'https://www.columbiaspectator.com/',
+    color: '#174d5b',
+  },
+  {
+    title: '116 THINGS TO DO BEFORE GRADUATING',
+    url: 'https://www.columbiaspectator.com/',
+    color: '#f26d5b',
+    shadowColor: '#f1bc9c',
+  },
+  {
+    title: 'GET YOUR TEXTBOOKS',
     url: 'https://www.columbiaspectator.com/',
     color: '#9BDAE3',
   },
@@ -149,7 +172,7 @@ const Orientation = () => (
   <div>
     <Navbar entries={navBarEntries} />
     <WelcomeContainer id="welcome" tocEntries={tocEntries} />
-    <BannerRow buttons={BannerRowDemo} />
+    <BannerRow buttons={BannerRowDemo} mobileButtons={MobileBannerRowDemo} />
     <StaffContainer staffInfo={StaffInfo} />
     {/* temporarily all the staff info data are stored inside its own file */}
   </div>

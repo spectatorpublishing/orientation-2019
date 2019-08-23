@@ -16,7 +16,7 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: ${(props) => (props.mobile ? 'stretch' : 'flexStart')};
   justify-content: ${(props) => (props.mobile ? 'space-around' : 'center')};
   margin: 5vh 5vw 0vh 5vw;
   flex-wrap: wrap;
@@ -26,6 +26,7 @@ const Row = styled.div`
 const Col = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex: 1 1 30%;
 `;
 
