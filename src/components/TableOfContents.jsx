@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, { Component } from 'react';
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
 import { theme } from '../GlobalStyles';
@@ -23,7 +23,6 @@ const Container = styled.div`
 `;
 
 const Border = styled.div`
-  position: relative;
   height: auto;
   border: 2px solid;
   border-color: #f47263;
@@ -46,56 +45,50 @@ const TableText = styled.p`
   }
 `;
 
-export default class TableOfContents extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+const changeTextColor = (id, isActive) => {
+  const entry = document.getElementById(id);
+  if (isActive) {
+    entry.style.color = '#F47263';
+  } else {
+    entry.style.color = 'black';
   }
+};
 
-  changeTextColor = (id, isActive) => {
-    const entry = document.getElementById(id);
-    if (isActive) {
-      entry.style.color = '#F47263';
-    } else {
-      entry.style.color = 'black';
-    }
-  };
-
-  render() {
-    const { entries } = this.props;
-    return (
-      <Container>
-        <Table>
-          {entries.map((entry) => {
-            const linkUrL = `#${entry}`;
-            return (
-              <TableEntry>
-                <Link
-                  smooth
-                  to={linkUrL}
-                  style={{
-                    textDecorationLine: 'none',
-                    transition: 'color .2s',
-                  }}
-                  id={linkUrL}
-                  onMouseEnter={() => {
-                    this.changeTextColor(linkUrL, true);
-                  }}
-                  onMouseLeave={() => {
-                    this.changeTextColor(linkUrL, false);
-                  }}
-                >
-                  {<TableText>{entry}</TableText>}
-                </Link>
-              </TableEntry>
-            );
-          })}
-        </Table>
-        <Border />
-      </Container>
-    );
-  }
-}
+const TableOfContents = (props) => {
+  const { entries } = props;
+  return (
+    <Container>
+      <Table>
+        {entries.map((entry) => {
+          const linkUrL = `#${entry}`;
+          return (
+            <TableEntry>
+              <Link
+                smooth
+                to={linkUrL}
+                style={{
+                  color: 'black',
+                  textDecorationLine: 'none',
+                  transition: 'color .2s',
+                }}
+                id={linkUrL}
+                onMouseEnter={() => {
+                  changeTextColor(linkUrL, true);
+                }}
+                onMouseLeave={() => {
+                  changeTextColor(linkUrL, false);
+                }}
+              >
+                <TableText>{entry}</TableText>
+              </Link>
+            </TableEntry>
+          );
+        })}
+      </Table>
+      <Border />
+    </Container>
+  );
+};
 
 TableOfContents.propTypes = {
   entries: PropTypes.arrayOf(PropTypes.string),
@@ -104,3 +97,5 @@ TableOfContents.propTypes = {
 TableOfContents.defaultProps = {
   entries: null,
 };
+
+export default TableOfContents;
