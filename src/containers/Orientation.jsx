@@ -36,6 +36,105 @@ const BannerRowDemo = [
   },
 ];
 
+const StaffInfo = [
+  {
+    title: 'Art & Entertainment',
+    members: [
+      'Katherine Gerberich, Editor in Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
+  {
+    title: 'Product',
+    members: [
+      'Kevin Li, Head of Product',
+      'Arsalaan Ansari, Head of Engineering',
+      'Cecilia Orduna, Lead Product Designer',
+    ],
+  },
+  {
+    title: 'Product',
+    members: [
+      'Kevin Li, Head of Product',
+      'Arsalaan Ansari, Head of Engineering',
+      'Cecilia Orduna, Lead Product Designer',
+    ],
+  },
+  {
+    title: 'Corporate Board',
+    members: [
+      'Katherine Gerberich, Editor in Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
+  {
+    title: 'Corporate Board',
+    members: [
+      'Katherine Gerberich, Editor in Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
+  {
+    title: 'Product',
+    members: [
+      'Kevin Li, Head of Product',
+      'Arsalaan Ansari, Head of Engineering',
+      'Cecilia Orduna, Lead Product Designer',
+    ],
+  },
+  {
+    title: 'Corporate Board',
+    members: [
+      'Katherine Gerberich, Editor in Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
+  {
+    title: 'Product',
+    members: [
+      'Kevin Li, Head of Product',
+      'Arsalaan Ansari, Head of Engineering',
+      'Cecilia Orduna, Lead Product Designer',
+    ],
+  },
+  {
+    title: 'Product',
+    members: [
+      'Kevin Li, Head of Product',
+      'Arsalaan Ansari, Head of Engineering',
+      'Cecilia Orduna, Lead Product Designer',
+    ],
+  },
+  {
+    title: 'Corporate Board',
+    members: [
+      'Katherine Gerberich, Editor in Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
+  {
+    title: 'Corporate Board',
+    members: [
+      'Katherine Gerberich, Editor in Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
+  {
+    title: 'Corporate Board',
+    members: [
+      'Katherine Gerberich, Editor in Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
+];
+
 const navBarEntries = [
   'HOME',
   'CLUBS',
@@ -46,17 +145,12 @@ const navBarEntries = [
   'JOIN SPEC',
 ];
 
-const StaffContainerDemo = {
-  url:
-    'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350',
-  alt: 'staff photo',
-};
 const Orientation = () => (
   <div>
     <Navbar entries={navBarEntries} />
     <WelcomeContainer id="welcome" tocEntries={tocEntries} />
     <BannerRow buttons={BannerRowDemo} />
-    <StaffContainer url={StaffContainerDemo.url} alt={StaffContainerDemo.alt} />
+    <StaffContainer staffInfo={StaffInfo} />
     {/* temporarily all the staff info data are stored inside its own file */}
   </div>
 );
