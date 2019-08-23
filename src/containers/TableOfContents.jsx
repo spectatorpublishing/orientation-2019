@@ -32,6 +32,26 @@ export default class Orientation extends Component {
     return entries;
   };
 
+  generateArticles = () => {
+    const slides = [];
+    for (let i = 0; i < 3; i += 1) {
+      const articleArr = [];
+
+      for (let j = 0; j < 5; j += 1) {
+        const article = {
+          href: i,
+          photoUrl:
+            'http://www.dumpaday.com/wp-content/uploads/2018/09/photos-21-3.jpg',
+          photoAlt: 'yeett',
+          headline: `yeet${i}${j}`,
+        };
+        articleArr.push(article);
+      }
+      slides.push(articleArr);
+    }
+    return slides;
+  };
+
   render() {
     const NavBarEntries = [
       'HOME',
