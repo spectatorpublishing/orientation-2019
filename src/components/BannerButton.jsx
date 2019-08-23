@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { theme } from '../GlobalStyles';
 
 // the dimensions of Container are 1 + dimensions of Box
 const Container = styled.div`
-  width: 22vw;
-  height: 33vw;
+  width: 20vw;
+  height: 30vw;
   position: relative;
-  @media (max-width: 1081px) {
-    width: 41rem;
-    height: 11rem;
-    margin: 0.5rem 0rem;
+  margin: 1rem 0rem;
+
+  @media (max-width: 992px) {
+    width: 80vw;
+    height: 25vw;
   }
 `;
 
@@ -19,36 +21,41 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 21vw;
-  height: 32vw;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0.7rem;
+  top: 3%;
   background: ${(props) => props.color};
 
-  @media (max-width: 1081px) {
-    width: 40rem;
-    height: 10rem;
+  @media (max-width: 992px) {
+    width: 100%;
+    height: 100%;
+    top: 7%;
   }
 `;
 
 // here dimensions are set to offset the size of the border
 const BoxShadow = styled.div`
-  border: 0.3rem solid;
-  width: 21vw;
-  height: 32vw;
+  border: 0.2rem solid;
+  width: 98%;
+  height: 98%;
   position: absolute;
-  left: 0.5rem;
+  left: 3%;
   border-color: ${(props) => props.shadowColor};
 
-  @media (max-width: 1081px) {
-    width: 40rem;
-    height: 10rem;
+  @media (max-width: 992px) {
+    width: 98%;
+    height: 98%;
   }
 `;
 
 const Title = styled.h3`
   padding: 3rem;
+  font-size: 3vw;
   color: ${(props) => props.textColor};
+  @media (max-width: ${theme.medium}) {
+    font-size: 1.2rem;
+  }
 `;
 
 const BannerButton = (props) => {
