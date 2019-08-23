@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React, { Component } from 'react';
 import TableOfContents from '../components/TableOfContents';
+import Navbar from '../components/Navbar';
 
 const Container = styled.div``;
 
@@ -32,6 +33,15 @@ export default class Orientation extends Component {
   };
 
   render() {
+    const NavBarEntries = [
+      'HOME',
+      'CLUBS',
+      'REGISTRATION',
+      'GET TO KNOW BARNUMBIA',
+      'MAPS',
+      '116 TRADITIONS',
+      'JOIN SPEC',
+    ];
     return (
       <Container>
         <Row>
@@ -39,6 +49,7 @@ export default class Orientation extends Component {
             <WelcomeContainer>
               <div style={{ height: '100vh', width: '100vw' }}>
                 {' '}
+                <Navbar entries={NavBarEntries} />
                 <TableOfContents entries={this.generateEntries()} />
                 {' '}
               </div>
@@ -99,41 +110,38 @@ export default class Orientation extends Component {
                 Section 4
               </div>
               <div
-                id="yeet5"
+                id="HOME"
                 style={{
                   height: '100vh',
                   width: '100vw',
-                  backgroundColor: 'cyan',
+                  backgroundColor: 'blue',
                 }}
               >
                 {' '}
-                Section 5
+                HOME
               </div>
               <div
-                id="yeet6"
+                id="CLUBS"
                 style={{
                   height: '100vh',
                   width: '100vw',
-                  backgroundColor: 'purple',
+                  backgroundColor: 'red',
                 }}
               >
                 {' '}
-                Section 6
+                CLUBS
               </div>
               <div
-                id="yeet7"
+                id="REGISTRATION"
                 style={{
                   height: '100vh',
                   width: '100vw',
-                  backgroundColor: 'brown',
+                  backgroundColor: 'green',
                 }}
               >
                 {' '}
-                Section 7
+                REGISTRATION
               </div>
-              <h1>Welcome</h1>
-              <h2>Class of 2023</h2>
-              <p>Select an option below to explore your orientation guide</p>
             </WelcomeContainer>
           </WelcomeColumn>
           <WelcomeColumn />
