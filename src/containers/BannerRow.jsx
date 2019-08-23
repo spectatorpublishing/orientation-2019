@@ -10,8 +10,9 @@ const Container = styled.div`
   justify-content: space-around;
   margin: 1.5rem;
 
-  @media (max-width: 576px) {
-    flex-wrap: wrap;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
