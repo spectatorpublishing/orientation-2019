@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import Orientation from './containers/Orientation';
 import Subpage from './containers/SubpageContainer';
+import TextbooksContainer from './containers/TextbooksContainer';
 import { GlobalStyles, theme } from './GlobalStyles';
 import Navbar from './components/Navbar';
 import BarnumbiaData from './data/BarnumbiaData';
@@ -50,6 +51,10 @@ const course = () => (
 
 const campus = () => <Subpage title="CAMPUS LIFE" data={StudentLifeData} />;
 
+const textbooks = () => (
+  <TextbooksContainer title="TEXTBOOKS" data={RegistrationData} />
+);
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -61,6 +66,7 @@ function App() {
           <Route exact path="/barnumbia" component={barnumbia} />
           <Route exact path="/registration" component={course} />
           <Route exact path="/campus" component={campus} />
+          <Route exact path="/textbooks" component={textbooks} />
         </Switch>
       </div>
     </ThemeProvider>
