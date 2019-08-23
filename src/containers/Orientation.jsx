@@ -187,25 +187,88 @@ const getToKnow = [
   },
 ];
 
-const generateArticles = () => {
-  const slides = [];
-  for (let i = 0; i < 3; i += 1) {
-    const articleArr = [];
-
-    for (let j = 0; j < 4; j += 1) {
-      const article = {
-        href: i,
-        photoUrl:
-          'http://www.dumpaday.com/wp-content/uploads/2018/09/photos-21-3.jpg',
-        photoAlt: 'yeett',
-        headline: `Football kicks off season at Ivy League Media Day hosted by ESPN${i}${j}`,
-      };
-      articleArr.push(article);
-    }
-    slides.push(articleArr);
-  }
-  return slides;
-};
+const storiesToFollowArticles = [
+  [
+    {
+      href: 1,
+      link:
+        'http://columbiaspectator.com/news/2019/08/22/manhattanville-move-progresses-but-faces-fundraising-delays/',
+      photoUrl:
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/J5VNCTISZFGZJDST3TTWOK2KNE.jpg',
+      photoAlt: 'manhattanville',
+      headline: 'Manhattanville move progresses, but faces fundraising delays',
+    },
+    {
+      href: 2,
+      link:
+        'https://www.columbiaspectator.com/news/2019/08/22/elite-college-admissions-under-national-scrutiny/',
+      photoUrl:
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/YAWDMXHTGVHZHEOV745FERFK3I.jpg',
+      photoAlt: 'College Admissions',
+      headline: 'Elite college admissions under national scrutiny',
+    },
+    {
+      href: 3,
+      link:
+        'https://www.columbiaspectator.com/news/2019/08/22/barnard-poised-for-sweeping-administrative-changes/',
+      photoUrl:
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/RALDR4APQZCCVGLZ3WIXPOE2LM',
+      photoAlt: 'Barnard administration',
+      headline: 'Barnard poised for sweeping administrative changes',
+    },
+    {
+      href: 4,
+      link:
+        'https://www.columbiaspectator.com/news/2019/08/22/barnard-public-safety-faces-extensive-investigation-as-students-cite-incidents-of-antiblack-racism/',
+      photoUrl:
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/VUII2WXMNVHFPMQFYH5W26XWYM.jpg',
+      photoAlt: 'Barnard Public Safety',
+      headline:
+        'Barnard Public Safety faces extensive investigation as students cite incidents of antiblack racism',
+    },
+  ],
+  [
+    {
+      href: 5,
+      link:
+        'http://columbiaspectator.com/news/2019/08/22/columbia-faces-major-transition-period-following-series-of-administrative-hires/',
+      photoUrl:
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/VU4IBS6FUZBSRCX47NNCDYQ45E.jpg',
+      photoAlt: 'Columbia administration',
+      headline:
+        'Columbia faces major transition period following series of administrative hires',
+    },
+    {
+      href: 6,
+      link:
+        'https://www.columbiaspectator.com/news/2019/08/22/centennial-anniversary-of-the-core-marked-by-heated-debates-over-curriculums-diversity/',
+      photoUrl:
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/4EDU67YKSBBIJPHSRFNJ3OCC6U.jpeg',
+      photoAlt: '100th anniversary of core',
+      headline:
+        'Centennial anniversary of the Core marked by heated debates over curriculum’s diversity',
+    },
+    {
+      href: 7,
+      link:
+        'https://www.columbiaspectator.com/news/2019/08/22/as-manhattanville-expands-columbia-continues-to-shape-its-relationship-with-harlem/',
+      photoUrl:
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/PIGWCZ5Z7BERROWJDIDUXSLG4M.jpg',
+      photoAlt: 'WHDC',
+      headline:
+        'As Manhattanville expands, Columbia continues to shape its relationship with Harlem',
+    },
+    {
+      href: 8,
+      link:
+        'https://www.columbiaspectator.com/sports/2019/08/22/looking-back-at-the-2018-19-season/',
+      photoUrl:
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/LUNTZKDWGVAWBDMTFW5QWRNPHU.jpg',
+      photoAlt: 'looking back at the 18-19 sports season',
+      headline: 'Looking back at the 2018-19 season',
+    },
+  ],
+];
 
 const Orientation = () => (
   <div>
@@ -217,7 +280,7 @@ const Orientation = () => (
     />
     <GetToKnow getToKnow={getToKnow} backgroundImage={getToKnowImage} />
     <BannerRow buttons={BannerRowDemo} mobileButtons={MobileBannerRowDemo} />
-    <Carousel slides={generateArticles()} />
+    <Carousel slides={storiesToFollowArticles} />
     <DiscourseContainer>
       <Article
         link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"

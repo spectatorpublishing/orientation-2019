@@ -30,55 +30,92 @@ const ArticleRowWrapper = styled.div`
 const ArrowContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  width: 90vw;
+  width: 100vw;
   height: auto;
+  position: absolute;
+  top: 50%;
 
   & > button {
-    height: 5vh;
-    width: 7vw;
-    margin: 0 5vw;
-    font-size: 1.4vw;
+    height: 4vh;
+    width: 4vw;
+    margin: -8vh 0vw;
     background: transparent;
-    border-radius: ${theme.borderRadius};
-    border-width: 0.1rem;
-    border-color: ${theme.purple};
-    color: ${theme.purple};
-
-    &:hover {
-      background: ${theme.purple};
-      color: white;
-    }
+    border-color: transparent;
   }
 `;
 
-const MobileArticleContainer = styled.div`
+const ArticleContainer = styled.div`
   display: flex;
-  width: 80vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2vh 5vw;
+
+  & > a {
+    flex: 0 1 46%;
+    padding: 0rem 0.25rem 1rem 0.25rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+  }
 `;
 
 const DesktopContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
+  justify-content: flex-start;
   margin-top: 8vh;
-  margin-bottom: 15vh;
 `;
 
 const MobileContainer = styled.div`
+  margin: 5vh 3vw 10vh 3vw;
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
+  flex-direction: column;
+
+  @media (max-width: ${theme.medium}) {
+    margin-bottom: 5vh;
+  }
 `;
 
 const TitleContainer = styled.div`
   margin-left: 3rem;
   margin-bottom: -1vh;
+  display: flex;
+
+  @media (max-width: ${theme.medium}) {
+    margin: 0rem;
+    justify-content: center;
+  }
 `;
 
-const Title = styled.h3``;
+const Title = styled.h3`
+  text-transform: uppercase;
+`;
+
+const ArrowBack = () => (
+  <ButtonBack>
+    <svg id="left-icon" style={{ height: '60px', width: '30px' }}>
+      <path
+        fill={theme.orange}
+        d="M25 0 L15 0 L0 20 L15 40 L25 40 L10 20 Z"
+      />
+    </svg>
+  </ButtonBack>
+);
+
+const ArrowNext = () => (
+  <ButtonNext style={{ paddingRight: 0 }}>
+    <svg id="right-icon" style={{ height: '60px', width: '30px' }}>
+      <path
+        fill={theme.orange}
+        d="M0 0 L10 0 L25 20 L10 40 L0 40 L15 20 Z"
+      />
+    </svg>
+  </ButtonNext>
+);
 
 const Carousel = (props) => {
   const { slides } = props;
@@ -86,16 +123,16 @@ const Carousel = (props) => {
   return (
     <div>
       <Desktop>
-        <DesktopContainer>
-          <TitleContainer>
-            <Title>Stories to Follow</Title>
-          </TitleContainer>
-          <CarouselProvider
-            naturalSlideWidth={100}
-            naturalSlideHeight={30}
-            totalSlides={slides.length}
-            currentSlide={Math.floor(slides.length / 2)}
-          >
+        <CarouselProvider
+          naturalSlideWidth={100}
+          naturalSlideHeight={27}
+          totalSlides={slides.length}
+          currentSlide={Math.floor(slides.length / 2)}
+        >
+          <DesktopContainer>
+            <TitleContainer>
+              <Title>Stories to Follow</Title>
+            </TitleContainer>
             <Slider>
               {slides.map((slide, i) => (
                 <Slide index={i}>
@@ -103,6 +140,7 @@ const Carousel = (props) => {
                     {slide.map((entry) => (
                       <Article
                         href={entry.href}
+                        link={entry.link}
                         photoAlt={entry.photoAlt}
                         photoUrl={entry.photoUrl}
                         headline={entry.headline}
@@ -113,25 +151,29 @@ const Carousel = (props) => {
               ))}
             </Slider>
             <ArrowContainer>
-              <ButtonBack>Back</ButtonBack>
-              <ButtonNext>Next</ButtonNext>
+              <ArrowBack />
+              <ArrowNext />
             </ArrowContainer>
-          </CarouselProvider>
-        </DesktopContainer>
+          </DesktopContainer>
+        </CarouselProvider>
       </Desktop>
 
       <MobileAndTablet>
         <MobileContainer>
-          <MobileArticleContainer>
-            {slides.map((slide) => slide.map((entry) => (
+          <TitleContainer>
+            <Title>Stories To Follow</Title>
+          </TitleContainer>
+          <ArticleContainer>
+            {slides.map((slide) => slide.map((article) => (
               <Article
-                href={entry.href}
-                photoAlt={entry.photoAlt}
-                photoUrl={entry.photoUrl}
-                headline={entry.headline}
+                href={article.href}
+                link={article.link}
+                photoAlt={article.photoAlt}
+                photoUrl={article.photoUrl}
+                headline={article.headline}
               />
             )))}
-          </MobileArticleContainer>
+          </ArticleContainer>
         </MobileContainer>
       </MobileAndTablet>
     </div>
