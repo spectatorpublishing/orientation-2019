@@ -51,7 +51,7 @@ const BoxShadow = styled.div`
 
 const Title = styled.h3`
   padding: 3rem;
-  font-size: 3vw;
+  font-size: 3.33rem;
   color: ${(props) => props.textColor};
   @media (max-width: ${theme.medium}) {
     font-size: 6vw;

@@ -39,7 +39,6 @@ const NavBarText = styled.a`
 
   @media (max-width: 1350px) {
     height: auto;
-    font-size: 2.1em;
     padding-left: 1vw;
     padding-right: 1vw;
     line-height: 0.8;
@@ -61,6 +60,7 @@ const ColumbiaSpectatorContainer = styled.div`
 
 const ColumbiaSpectator = styled.img`
   width: 80%;
+  object-fit: contain;
 
   @media only screen and (max-height: ${theme.large}) {
     height: 60px;
@@ -146,9 +146,7 @@ export default class Navbar extends Component {
               );
             })}
             <ColumbiaSpectatorContainer>
-              <ColumbiaSpectator
-                src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png"
-              />
+              <ColumbiaSpectator src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png" />
             </ColumbiaSpectatorContainer>
           </NavBarContainer>
         </Desktop>

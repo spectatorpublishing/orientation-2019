@@ -9,8 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   body,
   button {
-    @import url('https://fonts.googleapis.com/css?family=Basic&display=swap');
-    font-family: 'Basic', sans-serif;
+    font-family: 'Basic Sans', sans-serif;
   }
   div {
     color: ${(props) => props.theme.darkGray};
