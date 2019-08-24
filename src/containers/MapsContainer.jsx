@@ -15,6 +15,11 @@ const Row = styled.div`
     flex-direction: column-reverse;
     margin: unset;
   }
+
+  & * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 `;
 
 const MapsList = styled.div`
