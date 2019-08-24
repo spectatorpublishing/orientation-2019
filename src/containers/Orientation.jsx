@@ -57,7 +57,7 @@ const BannerRowDemo = [
     url:
       'https://www.columbiaspectator.com/spectrum/2019/08/22/courses-we-loved-staff-picks-for-2019/',
     color: theme.purple,
-    shadowColor: theme.purple,
+    shadowColor: theme.orange,
   },
   {
     title: 'PREPARE FOR COURSE REGISTRATION DOWNLOAD VERGIL+',
@@ -70,13 +70,13 @@ const BannerRowDemo = [
     title: '116 THINGS TO DO BEFORE GRADUATING',
     url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
     color: theme.yellow,
-    shadowColor: theme.yellow,
+    shadowColor: theme.orange,
   },
   {
     title: 'GET TEXTBOOKS',
     url: '/#/textbooks',
     color: theme.navy,
-    shadowColor: theme.navy,
+    shadowColor: theme.orange,
   },
 ];
 
@@ -85,28 +85,36 @@ const MobileBannerRowDemo = [
     title: 'COURSES WE LOVED',
     url:
       'https://www.columbiaspectator.com/spectrum/2019/08/22/courses-we-loved-staff-picks-for-2019/',
+    color: theme.purple,
   },
   {
     title: 'DOWNLOAD VERGIL+',
     url:
       'https://www.columbiaspectator.com/spectrum/2018/04/30/vergils-debut-how-to-make-registration-a-piece-of-cake/',
 
-    color: '#174d5b',
+    color: theme.orange,
   },
   {
     title: '116 THINGS TO DO BEFORE GRADUATING',
     url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
-    color: '#f26d5b',
-    shadowColor: '#f1bc9c',
+    color: theme.yellow,
   },
   {
     title: 'GET YOUR TEXTBOOKS',
     url: '/#/textbooks',
-    color: '#9BDAE3',
+    color: theme.navy,
   },
 ];
 
 const StaffInfo = [
+  {
+    title: 'Corporate Board',
+    members: [
+      'Katherine Gerberich, Editor And Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
   {
     title: 'Design',
     members: [
@@ -137,14 +145,16 @@ const StaffInfo = [
     ],
   },
   {
-    title: 'Arts & Entertainment',
+    title: 'A&E',
     members: [
       'Sarah Beckley, A&E Editor',
-      'Gia Kim, A&E Deputy Editor',
       'Isabela Espadas Barros Leal, A&E Deputy Editor',
+      'Sarah Robertson, A&E Deputy Editor',
+      'Gia Kim, A&E Deputy Editor',
       'Fonda Shen, A&E Deputy Editor',
       'Samuel Jones, A&E Deputy Editor',
       'Alejandra Quintana, A&E Deputy Editor',
+      'Abby Rooney, A&E Deputy Editor',
     ],
   },
   {
@@ -196,6 +206,14 @@ const StaffInfo = [
 
 const StaffInfoMobile = [
   {
+    title: 'Corporate Board',
+    members: [
+      'Katherine Gerberich, Editor And Chief',
+      'Rahil Kamath, Managing Editor',
+      'Nima Mozhgani, Publisher',
+    ],
+  },
+  {
     title: 'Design',
     members: [
       'Michelle Shin, Design Editor',
@@ -245,14 +263,16 @@ const StaffInfoMobile = [
     members: ['Grace Lin, Spectrum Editor'],
   },
   {
-    title: 'Arts & Entertainment',
+    title: 'A&E',
     members: [
       'Sarah Beckley, A&E Editor',
-      'Gia Kim, A&E Deputy Editor',
       'Isabela Espadas Barros Leal, A&E Deputy Editor',
+      'Sarah Robertson, A&E Deputy Editor',
+      'Gia Kim, A&E Deputy Editor',
       'Fonda Shen, A&E Deputy Editor',
       'Samuel Jones, A&E Deputy Editor',
       'Alejandra Quintana, A&E Deputy Editor',
+      'Abby Rooney, A&E Deputy Editor',
     ],
   },
   {
@@ -282,7 +302,7 @@ const StaffInfoMobile = [
   },
 ];
 
-const recognition = 'COVER ART BY: JOURNALISM DESIGNER WEBSITE DESIGN BY: CECILIA ORDUÑA DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, HARRISON WANG, BILL CHEN & CHENOA BUNTS-ANDERSON';
+const recognition = 'COVER ART BY: HELEN YANG WEBSITE DESIGN BY: CECILIA ORDUÑA DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG, BILL CHEN & CHENOA BUNTS-ANDERSON';
 
 const getToKnowImage = {
   image:

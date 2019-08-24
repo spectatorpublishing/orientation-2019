@@ -27,10 +27,20 @@ const Box = styled.div`
   top: 3%;
   background: ${(props) => props.color};
 
+  &:hover {
+    top: 1.5%;
+    left: 3.5%;
+  }
+
   @media (max-width: ${theme.medium}) {
     width: 100%;
     height: 100%;
     top: 7%;
+
+    &:hover {
+      top: 3%;
+      left: 1%;
+    }
   }
 `;
 
@@ -40,10 +50,11 @@ const BoxShadow = styled.div`
   width: 98%;
   height: 98%;
   position: absolute;
-  left: 3%;
+  left: 5%;
   border-color: ${(props) => props.shadowColor};
 
   @media (max-width: ${theme.medium}) {
+    left: 3%;
     width: 98%;
     height: 98%;
   }
@@ -51,10 +62,10 @@ const BoxShadow = styled.div`
 
 const Title = styled.h3`
   padding: 3rem;
-  font-size: 3vw;
+  font-size: 2.5vw;
   color: ${(props) => props.textColor};
   @media (max-width: ${theme.medium}) {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 `;
 
@@ -91,7 +102,7 @@ BannerButton.propTypes = {
 
 BannerButton.defaultProps = {
   color: '#f1bc9c',
-  shadowColor: '#f26d5b',
+  shadowColor: theme.orange,
   textColor: 'white',
 };
 

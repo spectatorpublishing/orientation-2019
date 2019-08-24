@@ -55,17 +55,20 @@ const Col = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 1 30%;
+  flex: 1 1 35%;
   text-align: center;
+  width: 50%;
 `;
 
 const TitleContainer = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 `;
 
 const Title = styled.h2`
+  text-transform: uppercase;
   color: white;
 `;
 

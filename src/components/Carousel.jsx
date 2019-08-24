@@ -32,12 +32,12 @@ const ArrowContainer = styled.div`
   width: 100vw;
   height: auto;
   position: absolute;
-  top: 50%;
+  top: 40%;
 
   & > button {
     height: 4vh;
     width: 4vw;
-    margin: -8vh 0vw;
+    margin-bottom: 1vh;
     background: transparent;
     border-color: transparent;
   }
@@ -91,23 +91,37 @@ const TitleContainer = styled.div`
 
 const Title = styled.h3`
   text-transform: uppercase;
+  color: ${theme.purple};
 `;
 
 const ArrowBack = () => (
-  <ButtonBack style={{ paddingLeft: 0, paddingRight: '1vw' }}>
-    <svg id="left-icon" style={{ height: '60px', width: '30px' }}>
-      <path fill={theme.orange} d="M25 0 L15 0 L0 20 L15 40 L25 40 L10 20 Z" />
+  <ButtonBack style={{}}>
+    <svg id="left-icon" style={{ height: '100px', width: '30px' }}>
+      <path fill={theme.orange} d="M25 0 L20 0 L5 20 L20 40 L25 40 L10 20 Z" />
     </svg>
   </ButtonBack>
 );
 
 const ArrowNext = () => (
-  <ButtonNext style={{ paddingRight: 0 }}>
-    <svg id="right-icon" style={{ height: '60px', width: '30px' }}>
-      <path fill={theme.orange} d="M0 0 L10 0 L25 20 L10 40 L0 40 L15 20 Z" />
+  <ButtonNext style={{}}>
+    <svg id="right-icon" style={{ height: '100px', width: '30px' }}>
+      <path fill={theme.orange} d="M5 0 L10 0 L25 20 L10 40 L5 40 L20 20 Z" />
     </svg>
   </ButtonNext>
 );
+
+const StFLineContainer = styled.div`
+  width: 100%;
+  height: 1vh;
+  position: absolute;
+  top: 40%;
+`;
+
+const StFLine = styled.div`
+  height: 100%;
+  margin-top: 20px;
+  background: ${theme.purple};
+`;
 
 const Carousel = (props) => {
   const { slides } = props;
@@ -125,6 +139,9 @@ const Carousel = (props) => {
             <TitleContainer>
               <Title>Stories to Follow</Title>
             </TitleContainer>
+            <StFLineContainer>
+              <StFLine />
+            </StFLineContainer>
             <Slider>
               {slides.map((slide, i) => (
                 <Slide index={i}>
