@@ -42,6 +42,12 @@ const ReferralLink = styled.a`
   }
 `;
 
+const LinkContainer = styled.div`
+  @media (max-width: ${theme.medium}) {
+    padding: 1rem;
+  }
+`;
+
 const lithumData = [
   { title: 'Sappho', url: 'https://amzn.to/2KTo7PD' },
   { title: 'The Odyssey', url: 'https://amzn.to/31RHi1Y' },
@@ -83,7 +89,7 @@ const TextbooksContainer = (props) => {
         <MapsList color={theme.purple}>
           <h2>Lithum</h2>
           {lithumData.map((entry) => (
-            <div>
+            <LinkContainer>
               <ReferralLink
                 href={entry.url}
                 target="_blank"
@@ -92,14 +98,14 @@ const TextbooksContainer = (props) => {
               >
                 {entry.title}
               </ReferralLink>
-            </div>
+            </LinkContainer>
           ))}
         </MapsList>
 
         <MapsList color={theme.orange}>
           <h2>SEAS</h2>
           {seasData.map((entry) => (
-            <div>
+            <LinkContainer>
               <ReferralLink
                 href={entry.url}
                 target="_blank"
@@ -108,7 +114,7 @@ const TextbooksContainer = (props) => {
               >
                 {entry.title}
               </ReferralLink>
-            </div>
+            </LinkContainer>
           ))}
         </MapsList>
       </Row>
