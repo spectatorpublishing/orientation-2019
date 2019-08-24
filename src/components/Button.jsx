@@ -47,7 +47,7 @@ const Buttons = (props) => {
     getToKnow: { tab, tabLink },
   } = props;
   return (
-    <Button href={tabLink} prefetch>
+    <Button href={tabLink} target="_blank" rel="noopener noreferrer">
       <Inner>{tab}</Inner>
     </Button>
   );

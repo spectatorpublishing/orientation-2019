@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Desktop, ResponsiveComponent } from 'react-responsive-simple';
+import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import TableOfContents from '../components/TableOfContents';
 import { theme } from '../GlobalStyles';
 
@@ -52,6 +52,9 @@ const Italicized = styled.h5`
   margin-top: 0.5rem;
   font-style: italic;
   font-weight: lighter;
+  @media (max-width: ${theme.large}) {
+    text-shadow: 2px 2px 4px white;
+  }
 `;
 
 const Title = styled.h1`
@@ -93,7 +96,7 @@ const WelcomeContainer = (props) => {
           </Row>
         </Container>
       </Desktop>
-      <ResponsiveComponent max={1100}>
+      <MobileAndTablet>
         <Container>
           <TextContainer>
             <Title>WELCOME</Title>
@@ -104,7 +107,7 @@ const WelcomeContainer = (props) => {
           </TextContainer>
           <TableOfContents entries={tocEntries} />
         </Container>
-      </ResponsiveComponent>
+      </MobileAndTablet>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Mobile, ResponsiveComponent } from 'react-responsive-simple';
 import SectionTitle from '../components/SectionTitle';
+import { theme } from '../GlobalStyles';
 
 const DesktopAndTablet = (props) => {
   const { children } = props;
@@ -22,7 +23,11 @@ const Container = styled.div`
   flex: 1;
   background: #106e75;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 2.5rem;
+
+  @media (max-width: ${theme.medium}) {
+    padding: 1rem;
+  }
 `;
 
 const Row = styled.div`
@@ -65,7 +70,7 @@ const Title = styled.h2`
 `;
 
 const StaffContainer = (props) => {
-  const { staffInfo } = props;
+  const { id, staffInfo, staffInfoMobile } = props;
 
   return (
     <div>
@@ -78,15 +83,15 @@ const StaffContainer = (props) => {
           </Row>
           <SectionRow mobile>
             <Col>
-              {staffInfo
+              {staffInfoMobile
                 .slice(0, Math.floor(staffInfo.length / 2))
                 .map((info) => (
                   <SectionTitle title={info.title} members={info.members} />
                 ))}
             </Col>
             <Col>
-              {staffInfo
-                .slice(Math.floor(staffInfo.length / 2), staffInfo.length)
+              {staffInfoMobile
+                .slice(Math.floor(staffInfo.length / 2), staffInfo.length + 1)
                 .map((info) => (
                   <SectionTitle title={info.title} members={info.members} />
                 ))}
@@ -96,7 +101,7 @@ const StaffContainer = (props) => {
       </Mobile>
 
       <DesktopAndTablet>
-        <Container>
+        <Container id={id}>
           <Row>
             <TitleContainer>
               <Title>Staff</Title>
@@ -114,7 +119,9 @@ const StaffContainer = (props) => {
 };
 
 StaffContainer.propTypes = {
+  id: PropTypes.string.isRequired,
   staffInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
+  staffInfoMobile: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default StaffContainer;

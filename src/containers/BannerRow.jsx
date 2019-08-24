@@ -31,12 +31,12 @@ DesktopAndTablet.propTypes = {
 };
 
 const BannerRow = (props) => {
-  const { buttons, mobileButtons } = props;
+  const { id, buttons, mobileButtons } = props;
 
   return (
     <div>
       <DesktopAndTablet>
-        <Container>
+        <Container id={id}>
           {buttons.map((button) => (
             <BannerButton
               title={button.title}
@@ -49,7 +49,7 @@ const BannerRow = (props) => {
         </Container>
       </DesktopAndTablet>
       <Mobile>
-        <Container>
+        <Container id={id}>
           {mobileButtons.map((button) => (
             <BannerButton
               title={button.title}
@@ -66,6 +66,7 @@ const BannerRow = (props) => {
 };
 
 BannerRow.propTypes = {
+  id: PropTypes.string.isRequired,
   buttons: PropTypes.arrayOf(PropTypes.object).isRequired,
   mobileButtons: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

@@ -3,23 +3,25 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { HashLink } from 'react-router-hash-link';
 import { HashRouter } from 'react-router-dom';
+import { theme } from '../GlobalStyles';
 
 const Container = styled.div`
-  background: #ffc2b3;
+  margin: 5vh 0vw;
+  background: ${theme.yellow};
 `;
 
 const Title = styled.div`
-  padding-top: 16px;
+  padding-top: 2vh;
   display: flex;
-  width: 100%;
   align-items: center;
+  padding: 1vw;
 `;
 
-const MapsHeading = styled.h1`
+const MapsHeading = styled.h2`
   flex: 30%;
   color: #ffffff;
   text-align: right;
-  margin-right: 0.75rem;
+  font-size: 5vw;
 `;
 
 const MapsDescription = styled.h4`
@@ -28,6 +30,7 @@ const MapsDescription = styled.h4`
   color: #ffffff;
   text-align: left;
   margin-left: 0.75rem;
+  font-size: 1.3vw;
 `;
 
 const Body = styled.div`
@@ -40,17 +43,20 @@ const ItemList = styled.div`
   flex: 50%;
   font-style: italic;
   display: flex;
-  font-size: 16px;
   flex-direction: column;
+  padding: 3.9vw;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 `;
 
 const Item = styled.h4`
-  font-size: 16px;
+  font-size: 1.3vw;
   flex: 50%;
-  padding: 0.75rem;
+  padding: 1vw;
   color: #ffffff;
+  &:hover{
+    color: ${theme.black}
+  }
 `;
 
 const Vr = styled.hr`
@@ -80,14 +86,14 @@ const generateList = (list) => list.map((child) => (
   </HashLink>
 ));
 
-const MapsList = (props) => {
-  const { leftList, rightList } = props;
+const LinksList = (props) => {
+  const { leftList, rightList, title, description } = props;
   return (
     <HashRouter basename="/mapslist/">
       <Container>
         <Title>
-          <MapsHeading>MAPS</MapsHeading>
-          <MapsDescription>explore places on and around campus</MapsDescription>
+          <MapsHeading>{title}</MapsHeading>
+          <MapsDescription>{description}</MapsDescription>
         </Title>
         <Body>
           <ItemList>{generateList(leftList)}</ItemList>
@@ -99,7 +105,7 @@ const MapsList = (props) => {
   );
 };
 
-MapsList.propTypes = {
+LinksList.propTypes = {
   leftList: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
@@ -114,4 +120,4 @@ MapsList.propTypes = {
   ).isRequired,
 };
 
-export default MapsList;
+export default LinksList;

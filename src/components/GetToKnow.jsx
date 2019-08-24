@@ -31,10 +31,10 @@ const Title = styled.h2`
 `;
 
 const GetToKnow = (props) => {
-  const { backgroundImage, getToKnow } = props;
-  const Buttons = getToKnow.map((Hmm) => <Button getToKnow={Hmm} />);
+  const { id, backgroundImage, getToKnow } = props;
+  const Buttons = getToKnow.map((entry) => <Button getToKnow={entry} />);
   return (
-    <Container backgroundImage={backgroundImage}>
+    <Container id={id} backgroundImage={backgroundImage}>
       <Title>GET TO KNOW</Title>
       <ButtonContainer>{Buttons}</ButtonContainer>
     </Container>
@@ -43,6 +43,7 @@ const GetToKnow = (props) => {
 export default GetToKnow;
 
 GetToKnow.propTypes = {
+  id: PropTypes.string.isRequired,
   getToKnow: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string.isRequired,
 };

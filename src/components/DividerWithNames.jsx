@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import { theme } from '../GlobalStyles';
 
 const Container = styled.div`
@@ -11,6 +12,19 @@ const Container = styled.div`
   max-height: 100%;
   max-width: 100%;
 `;
+
+const MobileContainer = styled.div`
+  background: ${theme.purple};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2.4vw;
+  padding-bottom: 2.4vw;
+  max-height: 100%;
+  max-width: 100%;
+`;
+
 const LeftDiv = styled.div`
   flex: 65%;
   display: flex;
@@ -29,7 +43,8 @@ const Title = styled.h3`
   font-size: 4.2vw;
   line-height: 6vw;
   @media (max-width: 420px) {
-    line-height: 8vw;
+    font-size: 2rem;
+    margin-top: 2.5vh;
   }
 `;
 
@@ -58,12 +73,15 @@ const NameText = styled.p`
   color: #09093b;
   font-weight: 700;
   font-size: 1.25vw;
-  @media (min-width: 768px) {
-    font-size: 1.4vw;
-  }
   padding-left: 1rem;
   padding-right: 1rem;
   line-height: 2vw;
+  @media (max-width: ${theme.large}) {
+    margin-top: 2vh;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    text-align: center;
+  }
 `;
 const DividerWithNames = (props) => {
   const {
@@ -89,17 +107,27 @@ const DividerWithNames = (props) => {
   );
   const bodyToShow = body || defaultBody;
   return (
-    <Container>
-      <LeftDiv>
-        <Title>{title}</Title>
-        <Body>{bodyToShow}</Body>
-      </LeftDiv>
-      <RightDiv>
-        <div>
+    <>
+      <Desktop>
+        <Container>
+          <LeftDiv>
+            <Title>{title}</Title>
+            <Body>{bodyToShow}</Body>
+          </LeftDiv>
+          <RightDiv>
+            <div>
+              <NameText>{recognition}</NameText>
+            </div>
+          </RightDiv>
+        </Container>
+      </Desktop>
+      <MobileAndTablet>
+        <MobileContainer>
+          <Title>CREDITS</Title>
           <NameText>{recognition}</NameText>
-        </div>
-      </RightDiv>
-    </Container>
+        </MobileContainer>
+      </MobileAndTablet>
+    </>
   );
 };
 DividerWithNames.propTypes = {
