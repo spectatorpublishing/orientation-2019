@@ -51,9 +51,7 @@ const course = () => (
 
 const campus = () => <Subpage title="CAMPUS LIFE" data={StudentLifeData} />;
 
-const textbooks = () => (
-  <TextbooksContainer title="TEXTBOOKS" data={RegistrationData} />
-);
+const textbooks = () => <TextbooksContainer title="TEXTBOOK LINKS" />;
 
 function App() {
   return (
