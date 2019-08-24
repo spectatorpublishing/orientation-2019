@@ -10,6 +10,7 @@ import GetToKnow from '../components/GetToKnow';
 import Carousel from '../components/Carousel';
 import JoinTheDiscourseData from '../data/JoinTheDiscourseData';
 import MapsContainer from './MapsContainer';
+import { theme } from '../GlobalStyles';
 
 const tocEntries = [
   {
@@ -55,23 +56,27 @@ const BannerRowDemo = [
     title: 'COURSES WE LOVED',
     url:
       'https://www.columbiaspectator.com/spectrum/2019/08/22/courses-we-loved-staff-picks-for-2019/',
+    color: theme.purple,
+    shadowColor: theme.purple,
   },
   {
     title: 'PREPARE FOR COURSE REGISTRATION DOWNLOAD VERGIL+',
     url:
       'https://www.columbiaspectator.com/spectrum/2018/04/30/vergils-debut-how-to-make-registration-a-piece-of-cake/',
-    color: '#174d5b',
+    color: theme.orange,
+    shadowColor: theme.orange,
   },
   {
     title: '116 THINGS TO DO BEFORE GRADUATING',
     url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
-    color: '#f26d5b',
-    shadowColor: '#f1bc9c',
+    color: theme.yellow,
+    shadowColor: theme.yellow,
   },
   {
     title: 'REQUIRED READING',
     url: 'https://www.columbiaspectator.com/spectrum/required-reading/',
-    color: '#9BDAE3',
+    color: theme.navy,
+    shadowColor: theme.navy,
   },
 ];
 
