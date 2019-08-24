@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { theme } from '../GlobalStyles';
-// import StylizedArticle from '../components/StylizedArticle';
-// import { theme } from '../GlobalStyles';
 
 const OuterContainer = styled.div``;
 
@@ -11,15 +9,20 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
+  @media (max-width: ${theme.medium}) {
+    flex-direction: column;
+    margin: 5vh 5vw;
+  }
 `;
 
 const Title = styled.h2`
-  margin: 3vh 0vw 3vh 0vw;
+  margin: 3vh 2vw 3vh 2vw;
   text-align: center;
 `;
 
 const MapsList = styled.div`
-  padding: 2rem;
+  padding: 3rem;
   border: 1rem;
   box-sizing: border-box;
   & * {
@@ -32,6 +35,10 @@ const ReferralLink = styled.a`
   font-size: 2vw;
   &:hover {
     color: ${theme.navy};
+  }
+
+  @media (max-width: ${theme.medium}) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -60,11 +67,11 @@ const lithumData = [
 
 const seasData = [
   { title: 'Principles of Econ', url: 'https://amzn.to/31Xm7eT' },
-  { title: 'Intro to Stats w/ Calc', url: 'https://amzn.to/2KP0eJ0' },
-  { title: 'Into to Java', url: 'https://amzn.to/2HnrWKO' },
-  { title: 'Calc I & III', url: 'https://amzn.to/2HhHBLF' },
+  { title: 'Intro to Stats with Calculus', url: 'https://amzn.to/2KP0eJ0' },
+  { title: 'Intro to Java', url: 'https://amzn.to/2HnrWKO' },
+  { title: 'Calculus I & III', url: 'https://amzn.to/2HhHBLF' },
   { title: 'Intro Physics (1400 or 1600)', url: 'https://amzn.to/2Hk2Qw7 ' },
-  { title: 'Gen Chem ', url: 'https://amzn.to/2KSSRjS' },
+  { title: 'General Chemistry ', url: 'https://amzn.to/2KSSRjS' },
 ];
 
 const TextbooksContainer = (props) => {

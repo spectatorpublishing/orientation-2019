@@ -70,7 +70,7 @@ const Anchor = styled.a`
 const Divider = (props) => {
   const { title, body, link } = props;
   const defaultBody = (
-    <>
+    <div>
       <BodyText>
         This website was created entirely by our tech and design teams here at
         Spectator. Curious to see how it&apos;s done?
@@ -82,7 +82,7 @@ const Divider = (props) => {
         <Anchor href={link}>Click here</Anchor>
         <BodyText> to learn how to join our team</BodyText>
       </BodyText>
-    </>
+    </div>
   );
   const bodyToShow = body || defaultBody;
   return (

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 const OuterContainer = styled.div`
   margin: 5vh 3vw;
-  margin-top: 15vh;
 `;
 
 const InnerContainer = styled.div`
