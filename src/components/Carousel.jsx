@@ -22,7 +22,6 @@ const ArticleRowWrapper = styled.div`
     box-sizing: border-box;
     flex: 0 1 25%;
     padding: 1rem;
-    display: flex;
     flex-wrap: wrap;
   }
 `;
@@ -49,7 +48,7 @@ const ArticleContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 2vh 5vw;
+  margin: 2vh 6vw;
 
   & > a {
     flex: 0 1 46%;
@@ -67,7 +66,6 @@ const DesktopContainer = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 8vh;
 `;
 
 const MobileContainer = styled.div`
@@ -96,12 +94,9 @@ const Title = styled.h3`
 `;
 
 const ArrowBack = () => (
-  <ButtonBack>
+  <ButtonBack style={{ paddingLeft: 0, paddingRight: '1vw' }}>
     <svg id="left-icon" style={{ height: '60px', width: '30px' }}>
-      <path
-        fill={theme.orange}
-        d="M25 0 L15 0 L0 20 L15 40 L25 40 L10 20 Z"
-      />
+      <path fill={theme.orange} d="M25 0 L15 0 L0 20 L15 40 L25 40 L10 20 Z" />
     </svg>
   </ButtonBack>
 );
@@ -109,10 +104,7 @@ const ArrowBack = () => (
 const ArrowNext = () => (
   <ButtonNext style={{ paddingRight: 0 }}>
     <svg id="right-icon" style={{ height: '60px', width: '30px' }}>
-      <path
-        fill={theme.orange}
-        d="M0 0 L10 0 L25 20 L10 40 L0 40 L15 20 Z"
-      />
+      <path fill={theme.orange} d="M0 0 L10 0 L25 20 L10 40 L0 40 L15 20 Z" />
     </svg>
   </ButtonNext>
 );
@@ -127,7 +119,7 @@ const Carousel = (props) => {
           naturalSlideWidth={100}
           naturalSlideHeight={27}
           totalSlides={slides.length}
-          currentSlide={Math.floor(slides.length / 2)}
+          currentSlide={Math.floor(slides.length / 2) - 1}
         >
           <DesktopContainer>
             <TitleContainer>
@@ -157,7 +149,6 @@ const Carousel = (props) => {
           </DesktopContainer>
         </CarouselProvider>
       </Desktop>
-
       <MobileAndTablet>
         <MobileContainer>
           <TitleContainer>

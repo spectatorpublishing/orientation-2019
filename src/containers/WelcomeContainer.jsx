@@ -40,12 +40,11 @@ const TextContainer = styled.div`
 
 const OrientationImageContainer = styled.div`
   width: 100%;
-  height: 0;
-`;
-const OrientationImage = styled.img`
-  object-fit: contain;
-  width: 100%;
-  min-height: 100%;
+  height: auto;
+  background-image: url(${photoUrl});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 const Italicized = styled.h5`
@@ -88,11 +87,7 @@ const WelcomeContainer = (props) => {
               </TextContainer>
               <TableOfContents entries={tocEntries} />
             </Column>
-            <Column>
-              <OrientationImageContainer>
-                <OrientationImage src={photoUrl} />
-              </OrientationImageContainer>
-            </Column>
+            <OrientationImageContainer />
           </Row>
         </Container>
       </Desktop>
