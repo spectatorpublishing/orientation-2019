@@ -24,7 +24,7 @@ const Title = styled.h2`
 const MapsList = styled.div`
   padding: 3rem;
   border: 1rem;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   & * {
     color: white;
   }

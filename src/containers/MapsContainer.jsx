@@ -26,19 +26,19 @@ const MapsList = styled.div`
   flex: 1 1 40%;
   padding-right: 3vw;
   border: 1rem;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   & > div {
     background: #f9b5ed;
     padding: 2rem;
     position: relative;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 
     &:after {
       content: " ";
       width: 100%;
       height: 100%;
       position: absolute;
-      box-sizing: border-box;
+      box-sizing: border-box !important;
       top: -0.6rem;
       right: -0.6rem;
       z-index: -1;

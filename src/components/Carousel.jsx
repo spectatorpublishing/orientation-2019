@@ -19,7 +19,7 @@ const ArticleRowWrapper = styled.div`
   padding: 0rem 2rem;
 
   & > a {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     flex: 0 1 25%;
     padding: 1rem;
     flex-wrap: wrap;

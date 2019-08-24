@@ -30,7 +30,7 @@ const SectionRow = styled.div`
   flex-wrap: wrap;
   flex-grow: 0;
   & > div {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     flex: 0 1 33%;
     padding: 1rem;
     display: flex;

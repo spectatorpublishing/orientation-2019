@@ -13,7 +13,7 @@ const InnerContainer = styled.div`
 `;
 
 const DesktopTextContainer = styled.div`
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   display: none;
   max-width: 40%;
   padding: 0.5rem;
@@ -24,7 +24,7 @@ const DesktopTextContainer = styled.div`
 `;
 
 const MobileTextContainer = styled.div`
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   display: none;
   margin: auto 1rem;
 
@@ -60,7 +60,7 @@ const ArticleContainer = styled.div`
   align-items: flex-start;
 
   & > a {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     flex: 1 1 33%;
     min-width: 20rem;
     direction: ltr;

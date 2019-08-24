@@ -47,7 +47,7 @@ const OrientationImageContainer = styled.div`
   background-position: center;
 `;
 
-const Italicized = styled.h5`
+const Italicized = styled.p`
   margin-top: 0.5rem;
   font-style: italic;
   font-weight: lighter;
