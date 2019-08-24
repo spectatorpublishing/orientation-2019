@@ -26,11 +26,6 @@ export default [
   },
   {
     link:
-      'https://uploads.knightlab.com/storymapjs/1fb70157e6df7c9d0fab62abe8337605/orientation-2017-fraternities-and-sororities/index.html',
-    name: 'Fraternities and Sororities',
-  },
-  {
-    link:
       'https://uploads.knightlab.com/storymapjs/1fb70157e6df7c9d0fab62abe8337605/orientation-2017-libraries/index.html',
     name: 'Columbia Libraries and Study Spots',
   },

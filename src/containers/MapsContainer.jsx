@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import mapsData from '../data/MapsData';
+import { theme } from '../GlobalStyles';
 
 const Row = styled.div`
   display: flex;
@@ -61,6 +62,10 @@ const MapsList = styled.div`
       & p {
         color: white;
         font-size: 1.2rem;
+
+        &:hover {
+          color: ${theme.purple};
+        }
       }
     }
   }
