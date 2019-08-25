@@ -12,6 +12,7 @@ const NavBarContainer = styled.div`
   background: black;
   justify-content: space-between;
   align-items: center;
+  color: ${theme.navy};
 
   & > :first-child {
     margin-left: 2vw;
@@ -34,8 +35,8 @@ const NavBarEntry = styled.div`
 
 const NavBarText = styled.a`
   color: white;
-  font-size: 1.8em;
   font-family: "HalloEuroboy", sans-serif;
+  font-size: 1.3rem;
 
   @media (max-width: 1350px) {
     height: auto;
@@ -53,7 +54,7 @@ const ColumbiaSpectatorContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${theme.orange};
+  background: ${theme.yellow};
   height: 100%;
   width: 10vw;
 `;

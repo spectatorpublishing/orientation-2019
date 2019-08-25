@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import { theme } from '../GlobalStyles';
 
 const Container = styled.div`
   display: flex;
@@ -22,12 +23,16 @@ const ButtonContainer = styled.div`
   flex: 1 1 0;
 `;
 
-const Title = styled.h2`
+const Title = styled.h3`
   text-shadow: -1px 3px white;
   color: #e27400;
-  font-size: 4rem;
   flex: 1 1 0;
   min-width: 20rem;
+  font-size: 4rem;
+  @media (max-width: ${theme.small}) {
+    font-size: 2.2rem;
+    padding: 1rem;
+  }
 `;
 
 const GetToKnow = (props) => {

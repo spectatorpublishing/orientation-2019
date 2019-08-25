@@ -28,7 +28,7 @@ const SectionRow = styled.div`
   flex-direction: row;
   align-items: ${(props) => (props.mobile ? 'stretch' : 'flex-start')};
   justify-content: ${(props) => (props.mobile ? 'space-around' : 'center')};
-  margin: 5vh 5vw 0vh 5vw;
+  margin: 0vh 5vw 0vh 5vw;
   flex-wrap: wrap;
   width: 100%;
 
@@ -58,7 +58,7 @@ const TitleContainer = styled.div`
   margin-top: 2rem;
 `;
 
-const Title = styled.h2`
+const Title = styled.h3`
   color: white;
 `;
 

@@ -74,7 +74,7 @@ const BannerRowDemo = [
   },
   {
     title: 'GET TEXTBOOKS',
-    url: '/#/textbooks',
+    url: '/orientation-2019/#/textbooks',
     color: theme.navy,
     shadowColor: theme.orange,
   },
@@ -101,8 +101,8 @@ const MobileBannerRowDemo = [
   },
   {
     title: 'GET YOUR TEXTBOOKS',
-    url: '/#/textbooks',
-    color: theme.navy,
+    url: '/orientation-2019/#/textbooks',
+    color: '#9BDAE3',
   },
 ];
 
@@ -311,15 +311,15 @@ const getToKnowImage = {
 const getToKnow = [
   {
     tab: 'BARNUMBIA',
-    tabLink: '/#/barnumbia',
+    tabLink: '/orientation-2019/#/barnumbia',
   },
   {
     tab: 'CAMPUS LIFE',
-    tabLink: '/#/campus',
+    tabLink: '/orientation-2019/#/campus',
   },
   {
     tab: 'ACADEMICS',
-    tabLink: '/#/registration',
+    tabLink: '/orientation-2019/#/registration',
   },
 ];
 
@@ -425,7 +425,7 @@ const Orientation = () => (
       mobileButtons={MobileBannerRowDemo}
     />
     <MapsContainer />
-    <Carousel slides={storiesToFollowArticles} />
+    <Carousel id="stories" slides={storiesToFollowArticles} />
     <DiscourseContainer id="discourse">
       {JoinTheDiscourseData.map((entry) => (
         <Article

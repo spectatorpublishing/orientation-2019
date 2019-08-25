@@ -3,27 +3,20 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { theme } from '../GlobalStyles';
 
-const MemberItem = styled.h4`
+const MemberItem = styled.p`
   text-align: left;
   line-height: 1.5rem;
   color: white;
-
-  @media (max-width: ${theme.medium}) {
-    line-height: 1.2rem;
-    font-size: 0.9rem;
-  }
 `;
-const Title = styled.h3`
-  text-transform: uppercase;
+const Title = styled.h4`
   margin-bottom: 0.6rem;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 4.2rem;
-  line-height: 2.8rem;
-  font-size: 2.5rem;
+  height: 7.5vh;
+  line-height: 4.5vh;
 
   @media (max-width: ${theme.medium}) {
     height: 3.5rem;

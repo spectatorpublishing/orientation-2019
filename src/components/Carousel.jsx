@@ -94,6 +94,7 @@ const MobileContainer = styled.div`
 
   @media (max-width: ${theme.medium}) {
     margin-bottom: 5vh;
+    margin-top: unset;
   }
 `;
 
@@ -131,10 +132,10 @@ const Title = styled.h3`
 // );
 
 const Carousel = (props) => {
-  const { slides } = props;
+  const { id, slides } = props;
 
   return (
-    <div>
+    <div id={id}>
       <Desktop>
         <CarouselProvider
           naturalSlideWidth={100}
@@ -197,6 +198,7 @@ const Carousel = (props) => {
 export default Carousel;
 
 Carousel.propTypes = {
+  id: PropTypes.string.isRequired,
   slides: PropTypes.arrayOf(PropTypes.array),
 };
 

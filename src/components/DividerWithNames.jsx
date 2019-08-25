@@ -40,10 +40,8 @@ const RightDiv = styled.div`
 const Title = styled.h3`
   flex: 50%;
   color: #09093b;
-  font-size: 4.2vw;
   line-height: 6vw;
-  @media (max-width: 420px) {
-    font-size: 2rem;
+  @media (max-width: ${theme.medium}) {
     margin-top: 2.5vh;
   }
 `;
@@ -52,16 +50,13 @@ const Body = styled.div`
   flex: 50%;
   height: 100%;
   line-height: 1.5vw;
-  @media (max-width: 420px) {
+  @media (max-width: ${theme.medium}) {
     line-height: 5px;
   }
 `;
 
 const BodyText = styled.p`
-  font-size: 1.3vw;
-  color: #09093b;
   display: inline;
-  font-weight: 500;
 `;
 
 const Anchor = styled.a`
@@ -70,15 +65,11 @@ const Anchor = styled.a`
 `;
 
 const NameText = styled.p`
-  color: #09093b;
-  font-weight: 700;
-  font-size: 1.25vw;
   padding-left: 1rem;
   padding-right: 1rem;
   line-height: 2vw;
   @media (max-width: ${theme.large}) {
     margin-top: 2vh;
-    font-size: 2.5vw;
     line-height: 2vh;
     text-align: center;
   }
@@ -123,6 +114,7 @@ const DividerWithNames = (props) => {
       </Desktop>
       <MobileAndTablet>
         <MobileContainer>
+          <Title>LIKE WHAT YOU SEE?</Title>
           <NameText>{recognition}</NameText>
         </MobileContainer>
       </MobileAndTablet>

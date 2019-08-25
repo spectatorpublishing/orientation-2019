@@ -21,6 +21,8 @@ const Title = styled.h2`
   text-align: center;
 `;
 
+const Subtitle = styled.h2``;
+
 const MapsList = styled.div`
   padding: 3rem;
   border: 1rem;
@@ -32,13 +34,12 @@ const MapsList = styled.div`
 `;
 
 const ReferralLink = styled.a`
-  font-size: 2vw;
   &:hover {
     color: ${theme.navy};
   }
 
   @media (max-width: ${theme.medium}) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -87,7 +88,7 @@ const TextbooksContainer = (props) => {
       <Title>{title}</Title>
       <Row>
         <MapsList color={theme.purple}>
-          <h2>Lithum</h2>
+          <Subtitle>Lithum</Subtitle>
           {lithumData.map((entry) => (
             <LinkContainer>
               <ReferralLink

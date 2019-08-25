@@ -7,7 +7,7 @@ const Container = styled.a`
   text-decoration: none;
 `;
 
-const Headline = styled.h4`
+const Headline = styled.p`
   margin-top: 1rem;
   color: #242c49;
 `;

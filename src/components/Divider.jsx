@@ -27,15 +27,14 @@ const LeftDiv = styled.div`
 const RightDiv = styled.div`
   flex: 60%;
   margin: 0.4rem;
-  margin-left: 4rem;
+  margin-left: 1rem;
 `;
 const Title = styled.h3`
   color: #104a4f;
   text-align: right;
-  font-size: 4.2vw;
   @media (max-width: ${theme.large}) {
-    font-size: 1.8rem;
-    margin-top: 3vh;
+    text-align: center;
+    margin-top: 1.5vh;
   }
 `;
 
@@ -46,19 +45,17 @@ const Body = styled.div`
   padding-right: 4rem;
   line-height: 1.5vw;
   @media (max-width: ${theme.large}) {
-    line-height: 2.2vh;
+    line-height: 3vh;
     padding-left: 2.3rem;
     padding-top: 0.15rem;
   }
 `;
 
 const BodyText = styled.p`
-  font-size: 1vw;
   color: #104a4f;
   display: inline;
   font-weight: 600;
   @media (max-width: ${theme.large}) {
-    font-size: 2.5vw;
     line-height: 5px;
     text-align: center;
   }
