@@ -26,13 +26,19 @@ const ArticleRowWrapper = styled.div`
   }
 `;
 
+const NavigationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const ArrowContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  width: 90vw;
   height: auto;
   position: absolute;
-  top: 40%;
+  top: 75%;
 
   & > button {
     width: 3rem;
@@ -95,7 +101,7 @@ const Title = styled.h3`
 const ArrowBack = () => (
   <ButtonBack>
     <svg id="left-icon" viewBox="0 0 30 40">
-      <path fill={theme.orange} d="M25 0 L20 0 L5 20 L20 40 L25 40 L10 20 Z" />
+      <path fill={theme.purple} d="M25 0 L20 0 L5 20 L20 40 L25 40 L10 20 Z" />
     </svg>
   </ButtonBack>
 );
@@ -103,23 +109,10 @@ const ArrowBack = () => (
 const ArrowNext = () => (
   <ButtonNext>
     <svg id="right-icon" viewBox="0 0 30 40">
-      <path fill={theme.orange} d="M5 0 L10 0 L25 20 L10 40 L5 40 L20 20 Z" />
+      <path fill={theme.purple} d="M5 0 L10 0 L25 20 L10 40 L5 40 L20 20 Z" />
     </svg>
   </ButtonNext>
 );
-
-const StFLineContainer = styled.div`
-  width: 100%;
-  height: 1vh;
-  position: absolute;
-  top: 40%;
-`;
-
-const StFLine = styled.div`
-  height: 100%;
-  margin-top: 20px;
-  background: ${theme.purple};
-`;
 
 const Carousel = (props) => {
   const { slides } = props;
@@ -137,9 +130,6 @@ const Carousel = (props) => {
             <TitleContainer>
               <Title>Stories to Follow</Title>
             </TitleContainer>
-            <StFLineContainer>
-              <StFLine />
-            </StFLineContainer>
             <Slider>
               {slides.map((slide, i) => (
                 <Slide index={i}>
@@ -157,10 +147,12 @@ const Carousel = (props) => {
                 </Slide>
               ))}
             </Slider>
-            <ArrowContainer>
-              <ArrowBack />
-              <ArrowNext />
-            </ArrowContainer>
+            <NavigationContainer>
+              <ArrowContainer>
+                <ArrowBack />
+                <ArrowNext />
+              </ArrowContainer>
+            </NavigationContainer>
           </DesktopContainer>
         </CarouselProvider>
       </Desktop>
