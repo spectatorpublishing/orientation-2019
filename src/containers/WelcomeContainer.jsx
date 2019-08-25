@@ -52,21 +52,22 @@ const Italicized = styled.p`
   font-style: italic;
   font-weight: lighter;
   @media (max-width: ${theme.large}) {
+    font-size: 0.8rem;
     text-shadow: 2px 2px 4px white;
   }
 `;
 
 const Title = styled.h1`
   @media (max-width: ${theme.large}) {
-    margin-top: 20vh;
-    font-size: 5rem;
+    margin-top: 5vh;
+    font-size: 4rem;
   }
 `;
 
 const Subtitle = styled.h2`
   margin-top: -2vh;
   @media (max-width: ${theme.large}) {
-    font-size: 4rem;
+    font-size: 2.7rem;
   }
 `;
 
