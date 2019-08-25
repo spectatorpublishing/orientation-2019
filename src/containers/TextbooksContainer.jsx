@@ -19,18 +19,9 @@ const Row = styled.div`
 const Title = styled.h2`
   margin: 3vh 2vw 3vh 2vw;
   text-align: center;
-
-  @media (max-width: ${theme.medium}) {
-    font-size: 3rem;
-  }
 `;
 
-const Subtitle = styled.h2`
-  @media (max-width: ${theme.medium}) {
-    text-align: center;
-    font-size: 3rem;
-  }
-`;
+const Subtitle = styled.h2``;
 
 const MapsList = styled.div`
   padding: 3rem;

@@ -38,7 +38,6 @@ const Header = styled.h3`
   text-transform: uppercase;
 
   @media only screen and (max-width: ${(props) => props.theme.small}) {
-    font-size: 15vw; /* Will change with font change */
     margin-right: -20vw; /* Will change with font change */
   }
 `;

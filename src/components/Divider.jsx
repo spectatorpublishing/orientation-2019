@@ -32,9 +32,8 @@ const RightDiv = styled.div`
 const Title = styled.h3`
   color: #104a4f;
   text-align: right;
-  font-size: 4.2vw;
   @media (max-width: ${theme.large}) {
-    font-size: 1.8rem;
+    text-align: center;
     margin-top: 3vh;
   }
 `;

@@ -87,6 +87,10 @@ const MapDisplay = styled.div`
   }
 `;
 
+const Title = styled.h3`
+  color: white;
+`;
+
 export default class MapsContainer extends Component {
   constructor(props) {
     super(props);
@@ -108,7 +112,7 @@ export default class MapsContainer extends Component {
       <Row>
         <MapsList>
           <div>
-            <h2>Maps</h2>
+            <Title>Maps</Title>
             {mapsData.map(({ name, link }, i) => (
               <div
                 key={name}
