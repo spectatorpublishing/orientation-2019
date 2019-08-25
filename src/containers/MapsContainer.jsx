@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import mapsData from '../data/MapsData';
+import { theme } from '../GlobalStyles';
 
 const Row = styled.div`
   display: flex;
@@ -30,6 +31,9 @@ const MapsList = styled.div`
     & h2 {
       color: white;
       text-transform: uppercase;
+      @media (max-width: ${theme.large}) {
+        text-align: center;
+      }
     }
 
     & div {
@@ -46,9 +50,13 @@ const MapsList = styled.div`
       }
 
       & p {
+        padding: 0.3rem;
         color: white;
-        font-size: 1rem;
         font-weight: bold;
+
+        @media (max-width: ${theme.large}) {
+          font-size: 1rem;
+        }
       }
     }
   }
