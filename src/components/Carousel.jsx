@@ -104,8 +104,10 @@ const TitleContainer = styled.div`
   display: flex;
 
   @media (max-width: ${theme.medium}) {
-    margin: 0rem;
+    margin-left: 0rem;
+    margin-bottom: 12vh;
     justify-content: center;
+    text-align: center;
   }
 `;
 

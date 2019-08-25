@@ -56,7 +56,7 @@ const textbooks = () => <TextbooksContainer title="TEXTBOOK LINKS" />;
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <>
         <Navbar entries={navBarEntries} />
         <GlobalStyles />
         <Switch>
@@ -66,7 +66,7 @@ function App() {
           <Route exact path="/campus" component={campus} />
           <Route exact path="/textbooks" component={textbooks} />
         </Switch>
-      </div>
+      </>
     </ThemeProvider>
   );
 }
