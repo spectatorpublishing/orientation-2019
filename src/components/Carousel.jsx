@@ -30,20 +30,32 @@ const NavigationContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 100vw;
+  top: 40%;
 `;
 
 const ArrowContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 90vw;
-  height: auto;
-  position: absolute;
-  top: 75%;
+  width: 100%;
 
   & > button {
-    width: 3rem;
+    border: solid ${theme.purple};
+    border-width: 0 0.6rem 0.6rem 0;
+    display: inline-block;
+    padding: 0.6rem;
     background: transparent;
-    border-color: transparent;
+  }
+
+  & > .left {
+    transform: rotate(135deg);
+    margin-left: 1rem;
+  }
+
+  & > .right {
+    transform: rotate(-45deg);
+    margin-right: 1rem;
   }
 `;
 
@@ -101,21 +113,22 @@ const Title = styled.h3`
   color: ${theme.purple};
 `;
 
-const ArrowBack = () => (
-  <ButtonBack>
-    <svg id="left-icon" viewBox="0 0 30 40">
-      <path fill={theme.purple} d="M25 0 L20 0 L5 20 L20 40 L25 40 L10 20 Z" />
-    </svg>
-  </ButtonBack>
-);
-
-const ArrowNext = () => (
-  <ButtonNext>
-    <svg id="right-icon" viewBox="0 0 30 40">
-      <path fill={theme.purple} d="M5 0 L10 0 L25 20 L10 40 L5 40 L20 20 Z" />
-    </svg>
-  </ButtonNext>
-);
+// just in case we still need the svgs: here they are
+// const ArrowBack = () => (
+//   <ButtonBack>
+//     <svg id="left-icon" viewBox="0 0 30 40">
+//       <path fill={theme.purple} d="M25 0 L20 0 L5 20 L20 40 L25 40 L10 20 Z" />
+//     </svg>
+//   </ButtonBack>
+// );
+//
+// const ArrowNext = () => (
+//   <ButtonNext>
+//     <svg id="right-icon" viewBox="0 0 30 40">
+//       <path fill={theme.purple} d="M5 0 L10 0 L25 20 L10 40 L5 40 L20 20 Z" />
+//     </svg>
+//   </ButtonNext>
+// );
 
 const Carousel = (props) => {
   const { slides } = props;
@@ -152,8 +165,8 @@ const Carousel = (props) => {
             </Slider>
             <NavigationContainer>
               <ArrowContainer>
-                <ArrowBack />
-                <ArrowNext />
+                <ButtonBack class="left" />
+                <ButtonNext class="right" />
               </ArrowContainer>
             </NavigationContainer>
           </DesktopContainer>
