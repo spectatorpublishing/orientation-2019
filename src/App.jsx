@@ -13,7 +13,7 @@ import StudentLifeData from './data/StudentLifeData';
 const navBarEntries = [
   {
     title: 'HOME',
-    linkUrl: '/',
+    linkUrl: '/orientation-2019',
   },
   {
     title: 'CLUBS',
@@ -21,11 +21,11 @@ const navBarEntries = [
   },
   {
     title: 'REGISTRATION',
-    linkUrl: '/#/registration',
+    linkUrl: '/orientation-2019/#/registration',
   },
   {
     title: 'GET TO KNOW BARNUMBIA',
-    linkUrl: '/#/barnumbia',
+    linkUrl: '/orientation-2019/#/barnumbia',
   },
   {
     title: 'MAPS',
