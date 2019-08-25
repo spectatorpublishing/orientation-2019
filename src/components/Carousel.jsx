@@ -55,7 +55,7 @@ const ArrowContainer = styled.div`
 
   & > .right {
     transform: rotate(-45deg);
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 `;
 
@@ -85,6 +85,7 @@ const DesktopContainer = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
+  overflow: hidden;
 `;
 
 const MobileContainer = styled.div`
@@ -103,9 +104,9 @@ const TitleContainer = styled.div`
   margin-bottom: -1vh;
   display: flex;
 
-  @media (max-width: ${theme.medium}) {
+  @media (max-width: ${theme.large}) {
     margin-left: 0rem;
-    margin-bottom: 12vh;
+    margin-bottom: 10vh;
     justify-content: center;
     text-align: center;
   }
