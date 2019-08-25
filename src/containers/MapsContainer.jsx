@@ -23,48 +23,39 @@ const MapsList = styled.div`
   border: 1rem;
   box-sizing: border-box !important;
   & > div {
-    background: #f9b5ed;
+    background: #ffd05f;
     padding: 2rem;
     position: relative;
     box-sizing: border-box !important;
 
-    &:after {
-      content: " ";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      box-sizing: border-box !important;
-      top: -0.6rem;
-      right: -0.6rem;
-      z-index: -1;
-      border: 0.2rem solid #f26d5b;
-    }
-
     & h2 {
       color: white;
+      text-transform: uppercase;
+      @media (max-width: ${theme.large}) {
+        text-align: center;
+      }
     }
 
     & div {
+      cursor: pointer;
       transform: translateX(1rem);
 
       &:focus {
         outline: none;
       }
 
-      &:hover:not(.active) {
-        transform: translateX(2rem);
-      }
-
+      &:hover,
       &.active {
-        transform: translateX(0rem);
+        font-style: italic;
       }
 
       & p {
+        padding: 0.3rem;
         color: white;
-        font-size: 1.2rem;
+        font-weight: bold;
 
-        &:hover {
-          color: ${theme.purple};
+        @media (max-width: ${theme.large}) {
+          font-size: 1rem;
         }
       }
     }
@@ -84,6 +75,7 @@ const MapDisplay = styled.div`
 
   @media only screen and (max-width: ${(props) => props.theme.medium}) {
     height: 100vh;
+    -webkit-overflow-scrolling: touch;
   }
 `;
 
