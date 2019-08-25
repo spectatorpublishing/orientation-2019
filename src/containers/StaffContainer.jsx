@@ -66,7 +66,7 @@ const StaffContainer = (props) => {
   const { id, staffInfo, staffInfoMobile } = props;
 
   return (
-    <div>
+    <>
       <Mobile>
         <Container>
           <Row>
@@ -180,7 +180,7 @@ const StaffContainer = (props) => {
           </SectionRow>
         </Container>
       </Desktop>
-    </div>
+    </>
   );
 };
 
