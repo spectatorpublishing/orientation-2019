@@ -35,9 +35,7 @@ const ArrowContainer = styled.div`
   top: 40%;
 
   & > button {
-    height: 4vh;
-    width: 4vw;
-    margin-bottom: 1vh;
+    width: 3rem;
     background: transparent;
     border-color: transparent;
   }
@@ -95,16 +93,16 @@ const Title = styled.h3`
 `;
 
 const ArrowBack = () => (
-  <ButtonBack style={{}}>
-    <svg id="left-icon" style={{ height: '100px', width: '30px' }}>
+  <ButtonBack>
+    <svg id="left-icon" viewBox="0 0 30 40">
       <path fill={theme.orange} d="M25 0 L20 0 L5 20 L20 40 L25 40 L10 20 Z" />
     </svg>
   </ButtonBack>
 );
 
 const ArrowNext = () => (
-  <ButtonNext style={{}}>
-    <svg id="right-icon" style={{ height: '100px', width: '30px' }}>
+  <ButtonNext>
+    <svg id="right-icon" viewBox="0 0 30 40">
       <path fill={theme.orange} d="M5 0 L10 0 L25 20 L10 40 L5 40 L20 20 Z" />
     </svg>
   </ButtonNext>
