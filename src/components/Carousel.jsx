@@ -26,38 +26,57 @@ const ArticleRowWrapper = styled.div`
   }
 `;
 
+const NavigationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  top: 40%;
+`;
+
 const ArrowContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100vw;
-  height: auto;
-  position: absolute;
-  top: 50%;
+  width: 100%;
 
   & > button {
-    height: 4vh;
-    width: 4vw;
-    margin: -8vh 0vw;
+    border: solid ${theme.purple};
+    border-width: 0 0.6rem 0.6rem 0;
+    display: inline-block;
+    padding: 0.6rem;
     background: transparent;
-    border-color: transparent;
+  }
+
+  & > .left {
+    transform: rotate(135deg);
+    margin-left: 1rem;
+  }
+
+  & > .right {
+    transform: rotate(-45deg);
+    margin-right: 1rem;
   }
 `;
 
 const ArticleContainer = styled.div`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 2vh 6vw;
+  margin-top: -5rem;
+  direction: rtl;
+  align-items: flex-start;
 
   & > a {
-    flex: 0 1 46%;
-    padding: 0rem 0.25rem 1rem 0.25rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    max-height: 100%;
+    box-sizing: border-box !important;
+    flex: 1 1 33%;
+    min-width: 20rem;
+    direction: ltr;
+    padding: 1rem;
+
+    @media only screen and (max-width: ${(props) => props.theme.small}) {
+      flex-basis: 100%;
+      min-width: 5rem;
+    }
   }
 `;
 
@@ -75,6 +94,7 @@ const MobileContainer = styled.div`
 
   @media (max-width: ${theme.medium}) {
     margin-bottom: 5vh;
+    margin-top: unset;
   }
 `;
 
@@ -91,29 +111,31 @@ const TitleContainer = styled.div`
 
 const Title = styled.h3`
   text-transform: uppercase;
+  color: ${theme.purple};
 `;
 
-const ArrowBack = () => (
-  <ButtonBack style={{ paddingLeft: 0, paddingRight: '1vw' }}>
-    <svg id="left-icon" style={{ height: '60px', width: '30px' }}>
-      <path fill={theme.orange} d="M25 0 L15 0 L0 20 L15 40 L25 40 L10 20 Z" />
-    </svg>
-  </ButtonBack>
-);
-
-const ArrowNext = () => (
-  <ButtonNext style={{ paddingRight: 0 }}>
-    <svg id="right-icon" style={{ height: '60px', width: '30px' }}>
-      <path fill={theme.orange} d="M0 0 L10 0 L25 20 L10 40 L0 40 L15 20 Z" />
-    </svg>
-  </ButtonNext>
-);
+// just in case we still need the svgs: here they are
+// const ArrowBack = () => (
+//   <ButtonBack>
+//     <svg id="left-icon" viewBox="0 0 30 40">
+//       <path fill={theme.purple} d="M25 0 L20 0 L5 20 L20 40 L25 40 L10 20 Z" />
+//     </svg>
+//   </ButtonBack>
+// );
+//
+// const ArrowNext = () => (
+//   <ButtonNext>
+//     <svg id="right-icon" viewBox="0 0 30 40">
+//       <path fill={theme.purple} d="M5 0 L10 0 L25 20 L10 40 L5 40 L20 20 Z" />
+//     </svg>
+//   </ButtonNext>
+// );
 
 const Carousel = (props) => {
-  const { slides } = props;
+  const { id, slides } = props;
 
   return (
-    <div>
+    <div id={id}>
       <Desktop>
         <CarouselProvider
           naturalSlideWidth={100}
@@ -142,10 +164,12 @@ const Carousel = (props) => {
                 </Slide>
               ))}
             </Slider>
-            <ArrowContainer>
-              <ArrowBack />
-              <ArrowNext />
-            </ArrowContainer>
+            <NavigationContainer>
+              <ArrowContainer>
+                <ButtonBack class="left" />
+                <ButtonNext class="right" />
+              </ArrowContainer>
+            </NavigationContainer>
           </DesktopContainer>
         </CarouselProvider>
       </Desktop>
@@ -174,6 +198,7 @@ const Carousel = (props) => {
 export default Carousel;
 
 Carousel.propTypes = {
+  id: PropTypes.string.isRequired,
   slides: PropTypes.arrayOf(PropTypes.array),
 };
 

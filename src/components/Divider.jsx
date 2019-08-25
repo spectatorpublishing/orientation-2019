@@ -27,15 +27,14 @@ const LeftDiv = styled.div`
 const RightDiv = styled.div`
   flex: 60%;
   margin: 0.4rem;
-  margin-left: 0;
+  margin-left: 1rem;
 `;
 const Title = styled.h3`
   color: #104a4f;
   text-align: right;
-  font-size: 4.2vw;
   @media (max-width: ${theme.large}) {
-    font-size: 2rem;
-    margin-top: 3vh;
+    text-align: center;
+    margin-top: 1.5vh;
   }
 `;
 
@@ -44,19 +43,19 @@ const Body = styled.div`
   height: 100%;
   padding: 0.8rem;
   padding-right: 4rem;
-  line-height: 2vw;
+  line-height: 1.5vw;
   @media (max-width: ${theme.large}) {
-    line-height: 2vh;
+    line-height: 3vh;
+    padding-left: 2.3rem;
+    padding-top: 0.15rem;
   }
 `;
 
 const BodyText = styled.p`
-  font-size: 1vw;
   color: #104a4f;
   display: inline;
   font-weight: 600;
   @media (max-width: ${theme.large}) {
-    font-size: 2.5vw;
     line-height: 5px;
     text-align: center;
   }
@@ -72,11 +71,15 @@ const Divider = (props) => {
   const defaultBody = (
     <div>
       <BodyText>
-        This website was created entirely by our tech and design teams here at
-        Spectator. Curious to see how it&apos;s done?
+        This website was created entirely by our tech and product design teams
+        here at Spectator.
       </BodyText>
       <br />
-      <BodyText>Interested in doing this work yourself? </BodyText>
+      <BodyText>
+        Curious to see how it&apos;s done? Interested in doing this work
+        yourself?
+        {' '}
+      </BodyText>
       <br />
       <BodyText>
         <Anchor href={link}>Click here</Anchor>
@@ -86,7 +89,7 @@ const Divider = (props) => {
   );
   const bodyToShow = body || defaultBody;
   return (
-    <>
+    <div>
       <Desktop>
         <Container>
           <LeftDiv>
@@ -103,7 +106,7 @@ const Divider = (props) => {
           <Body>{bodyToShow}</Body>
         </MobileContainer>
       </MobileAndTablet>
-    </>
+    </div>
   );
 };
 

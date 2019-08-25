@@ -1,77 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle`
-  @font-face {
-    font-family: 'HalloEuroboy';
-    src: url('https://spectator-fonts.s3.amazonaws.com/HalloEuroboy.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  body,
-  button {
-    font-family: 'Basic Sans', sans-serif;
-  }
-  div {
-    color: ${(props) => props.theme.darkGray};
-  }
-  h1 {
-    color: ${(props) => props.theme.black};
-    font-family: 'HalloEuroboy', sans-serif;
-    font-size: 8rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    margin: 0;
-  }
-  h2 {
-    color: ${(props) => props.theme.black};
-    font-family: 'HalloEuroboy', sans-serif;
-    font-size: 4.9rem;
-    font-weight: 300;
-    letter-spacing: 0.07em;
-    margin: 0;
-  }
-  h3 {
-    color: ${(props) => props.theme.darkGray};
-    font-family: 'HalloEuroboy', sans-serif;
-    font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 0.06em;
-    margin: 0;
-  }
-  h4 {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 0;
-  }
-  h5 {
-    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
-    font-family: 'Raleway', sans-serif;
-    color: ${(props) => props.theme.black};
-    font-size: 1.5rem;
-    font-weight: 400; 
-    margin: 0;
-  }
-  h6 {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 0.8rem;
-    font-weight: 700; 
-    margin: 0;
-  }
-  p {
-    color: ${(props) => props.theme.black};
-    font-size: 1.4rem;
-    font-weight: 400; 
-    margin: 0;
-  }
-  b {
-    color: ${(props) => props.theme.black};
-    font-size: 1.4rem;
-    font-weight: 700;  
-    margin: 0;
-  }
-`;
-
 export const theme = {
   black: '#000000',
   white: '#FFFFFF',
@@ -88,4 +16,108 @@ export const theme = {
   small: '576px',
   medium: '768px',
   large: '992px',
+  extraLarge: '1200px',
 };
+
+export const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'HalloEuroboy';
+    src: url('https://spectator-fonts.s3.amazonaws.com/HalloEuroboy.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  body,
+  button {
+    font-family: 'basic-sans', sans-serif;
+  }
+  div {
+    color: ${(props) => props.theme.darkGray};
+  }
+  h1 {
+    color: ${(props) => props.theme.navy};
+    font-family: 'HalloEuroboy', sans-serif;
+    font-size: 8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin: 0;
+    @media (max-width: ${theme.small}){
+      font-size: 4rem;
+    }
+  }
+  h2 {
+    color: ${(props) => props.theme.navy};
+    font-family: 'HalloEuroboy', sans-serif;
+    font-size: 4.9rem;
+    font-weight: 300;
+    letter-spacing: 0.07em;
+    margin: 0;
+    @media (max-width: ${theme.medium}) {
+      font-size: 2.6rem;
+    }
+
+    
+  }
+  h3 {
+    color: ${(props) => props.theme.navy};
+    font-family: 'HalloEuroboy', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    margin: 0;
+
+    @media (min-width: ${theme.large}){
+      font-size: 4rem;
+    }
+  }
+  h4 {
+    color: ${(props) => props.theme.orange};
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-family: 'HalloEuroboy', sans-serif;
+    margin: 0;
+    @media (min-width: ${theme.extraLarge}){
+      font-size: 2.7rem;
+    }
+  }
+  h5 {
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
+    font-family: 'Raleway', sans-serif;
+    color: ${(props) => props.theme.navy};
+    font-size: 1.5rem;
+    font-weight: 400; 
+    margin: 0;
+  }
+  h6 {
+    color: ${(props) => props.theme.darkGray};
+    font-size: 0.8rem;
+    font-weight: 700; 
+    margin: 0;
+  }
+  p {
+    color: ${(props) => props.theme.navy};
+    font-size: 0.8rem;
+    font-weight: 700; 
+    margin: 0;
+    @media (min-width: ${theme.large}){
+      font-size: 1rem;
+    }
+    @media (min-width: ${theme.extraLarge}){
+      font-size: 1.3rem;
+
+    }
+  }
+  
+  a {
+    color: ${(props) => props.theme.navy};
+    font-size: 0.8rem;
+    font-weight: 400; 
+    margin: 0;
+  }
+
+  b {
+    color: ${(props) => props.theme.navy};
+    font-size: 1.4rem;
+    font-weight: 700;  
+    margin: 0;
+  }
+`;

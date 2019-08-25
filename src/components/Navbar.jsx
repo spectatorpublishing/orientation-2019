@@ -5,6 +5,8 @@ import { slide as Menu } from 'react-burger-menu';
 import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import { theme } from '../GlobalStyles';
 
+const logoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png';
+
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: inline-row;
@@ -12,6 +14,7 @@ const NavBarContainer = styled.div`
   background: black;
   justify-content: space-between;
   align-items: center;
+  color: ${theme.navy};
 
   & > :first-child {
     margin-left: 2vw;
@@ -21,6 +24,7 @@ const NavBarContainer = styled.div`
     display: flex;
     align-items: center;
     height: 60px;
+    background: ${theme.yellow};
   }
 
   @media only screen and (max-height: ${theme.large}) {
@@ -30,12 +34,15 @@ const NavBarContainer = styled.div`
 
 const NavBarEntry = styled.div`
   text-align: center;
+  @media (max-width: ${theme.large}) {
+    margin-bottom: 2vh;
+  }
 `;
 
 const NavBarText = styled.a`
   color: white;
-  font-size: 1.8em;
   font-family: "HalloEuroboy", sans-serif;
+  font-size: 1.3rem;
 
   @media (max-width: 1350px) {
     height: auto;
@@ -44,8 +51,8 @@ const NavBarText = styled.a`
     line-height: 0.8;
   }
   @media (max-width: ${theme.large}) {
-    padding-bottom: 2vh;
-    font-size: 2.6rem;
+    padding-bottom: 4vh;
+    font-size: 2rem;
   }
 `;
 
@@ -53,9 +60,13 @@ const ColumbiaSpectatorContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${theme.orange};
+  background: ${theme.yellow};
   height: 100%;
   width: 10vw;
+  @media (max-width: ${theme.large}) {
+    margin-left: 0vw;
+    width: 40vw;
+  }
 `;
 
 const ColumbiaSpectator = styled.img`
@@ -78,11 +89,11 @@ const burgerStyle = {
     position: 'relative',
     width: '35px',
     height: '30px',
-    left: '85vw',
+    left: '56vw',
     top: '0',
   },
   bmBurgerBars: {
-    background: 'white',
+    background: theme.navy,
   },
   bmMenu: {
     background: 'black',
@@ -146,13 +157,16 @@ export default class Navbar extends Component {
               );
             })}
             <ColumbiaSpectatorContainer>
-              <ColumbiaSpectator src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png" />
+              <ColumbiaSpectator src={logoUrl} />
             </ColumbiaSpectatorContainer>
           </NavBarContainer>
         </Desktop>
 
         <MobileAndTablet>
           <NavBarContainer>
+            <ColumbiaSpectatorContainer>
+              <ColumbiaSpectator src={logoUrl} />
+            </ColumbiaSpectatorContainer>
             <BurgerContainer>
               <Menu
                 right

@@ -3,29 +3,25 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { theme } from '../GlobalStyles';
 
-const MemberItem = styled.h4`
+const MemberItem = styled.p`
   text-align: left;
+  line-height: 1.5rem;
   color: white;
-
-  @media (max-width: ${theme.medium}) {
-    font-size: 3.5vw;
-  }
 `;
-const Title = styled.h3`
+const Title = styled.h4`
   margin-bottom: 0.6rem;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 4.5vh;
   height: 7.5vh;
   line-height: 4.5vh;
 
   @media (max-width: ${theme.medium}) {
-    height: 10vw;
-    line-height: 6vw;
-    font-size: 6vw;
+    height: 3.5rem;
+    line-height: 2.3rem;
+    font-size: 2rem;
   }
 `;
 const Container = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const Button = styled.a`
   position: relative;
@@ -26,7 +27,7 @@ const Inner = styled.div`
     position: absolute;
     height: 100%;
     width: 100%;
-    border: 1px solid #e27400;
+    border: 2px solid #e27400;
     left: -0.4rem;
     top: 0.2rem;
   }
@@ -35,11 +36,15 @@ const Inner = styled.div`
     position: absolute;
     display: inline-block;
     top: 50%;
-    height: 1px;
+    height: 2px;
     width: 500%;
     background: #e27400;
     left: 100%;
   }
+`;
+
+const ButtonText = styled.h4`
+  color: ${theme.orange};
 `;
 
 const Buttons = (props) => {
@@ -48,7 +53,9 @@ const Buttons = (props) => {
   } = props;
   return (
     <Button href={tabLink} target="_blank" rel="noopener noreferrer">
-      <Inner>{tab}</Inner>
+      <Inner>
+        <ButtonText>{tab}</ButtonText>
+      </Inner>
     </Button>
   );
 };
