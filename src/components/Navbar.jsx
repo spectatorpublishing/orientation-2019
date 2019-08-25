@@ -36,6 +36,7 @@ const NavBarEntry = styled.div`
 const NavBarText = styled.a`
   color: white;
   font-family: "HalloEuroboy", sans-serif;
+  font-size: 1.3rem;
 
   @media (max-width: 1350px) {
     height: auto;

@@ -9,9 +9,8 @@ const photoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/pu
 const opaqueUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg';
 
 const Container = styled.div`
-  height: auto;
+  min-height: 100vh;
   @media (max-width: ${theme.large}) {
-    height: auto;
     background-image: url(${opaqueUrl});
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,9 +20,9 @@ const Container = styled.div`
 `;
 
 const Row = styled.div`
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
 `;
 
 const Column = styled.div`
