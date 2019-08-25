@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${(props) => props.theme.darkGray};
   }
   h1 {
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 8rem;
     font-weight: 400;
@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   h2 {
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 4.9rem;
     font-weight: 300;
@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
   h5 {
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
     font-family: 'Raleway', sans-serif;
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-size: 1.5rem;
     font-weight: 400; 
     margin: 0;
@@ -59,13 +59,13 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   p {
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-size: 1.4rem;
     font-weight: 400; 
     margin: 0;
   }
   b {
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-size: 1.4rem;
     font-weight: 700;  
     margin: 0;
