@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -12,10 +12,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Basic Sans', sans-serif;
   }
   div {
-    color: ${props => props.theme.darkGray};
+    color: ${(props) => props.theme.darkGray};
   }
   h1 {
-    color: ${props => props.theme.black};
+    color: ${(props) => props.theme.black};
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 8rem;
     font-weight: 400;
@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   h2 {
-    color: ${props => props.theme.black};
+    color: ${(props) => props.theme.black};
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 4.9rem;
     font-weight: 300;
@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   h3 {
-    color: ${props => props.theme.darkGray};
+    color: ${(props) => props.theme.darkGray};
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 3rem;
     font-weight: 300;
@@ -39,7 +39,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   h4 {
-    color: ${props => props.theme.darkGray};
+    color: ${(props) => props.theme.darkGray};
     font-size: 1rem;
     font-weight: 700;
     margin: 0;
@@ -47,25 +47,25 @@ export const GlobalStyles = createGlobalStyle`
   h5 {
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
     font-family: 'Raleway', sans-serif;
-    color: ${props => props.theme.black};
+    color: ${(props) => props.theme.black};
     font-size: 1.5rem;
     font-weight: 400; 
     margin: 0;
   }
   h6 {
-    color: ${props => props.theme.darkGray};
+    color: ${(props) => props.theme.darkGray};
     font-size: 0.8rem;
     font-weight: 700; 
     margin: 0;
   }
   p {
-    color: ${props => props.theme.black};
+    color: ${(props) => props.theme.black};
     font-size: 1.4rem;
     font-weight: 400; 
     margin: 0;
   }
   b {
-    color: ${props => props.theme.black};
+    color: ${(props) => props.theme.black};
     font-size: 1.4rem;
     font-weight: 700;  
     margin: 0;
@@ -73,19 +73,19 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const theme = {
-  black: "#000000",
-  white: "#FFFFFF",
-  purple: "#9193C8",
-  orange: "#EC7100",
-  navy: "#242C49",
-  yellow: "#FFD05F",
-  darkGray: "#555555",
-  mediumGray: "#AAAAAA",
-  lightGray: "#DDDDDD",
-  shadow: "rgba(0, 0, 0, 0.3) 0 0 10px",
-  grayBorder: "border: 1px #DDDDDD solid; border-radius: 10px;",
-  borderRadius: "10px",
-  small: "576px",
-  medium: "768px",
-  large: "992px"
+  black: '#000000',
+  white: '#FFFFFF',
+  purple: '#9193C8',
+  orange: '#EC7100',
+  navy: '#242C49',
+  yellow: '#FFD05F',
+  darkGray: '#555555',
+  mediumGray: '#AAAAAA',
+  lightGray: '#DDDDDD',
+  shadow: 'rgba(0, 0, 0, 0.3) 0 0 10px',
+  grayBorder: 'border: 1px #DDDDDD solid; border-radius: 10px;',
+  borderRadius: '10px',
+  small: '576px',
+  medium: '768px',
+  large: '992px',
 };

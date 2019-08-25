@@ -30,7 +30,7 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "lint": "lint-staged",
-    "eslint": "eslint --ext .jsx --ext .js src",
+    "eslint": "eslint --ext .jsx --ext .js src ",
     "stylelint": "stylelint \"**/*.css\" \"**/*.js\" \"**/*.jsx\""
   },
   "pre-commit": [
