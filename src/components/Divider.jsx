@@ -27,14 +27,14 @@ const LeftDiv = styled.div`
 const RightDiv = styled.div`
   flex: 60%;
   margin: 0.4rem;
-  margin-left: 4rem;
+  margin-left: 1rem;
 `;
 const Title = styled.h3`
   color: #104a4f;
   text-align: right;
   @media (max-width: ${theme.large}) {
     text-align: center;
-    margin-top: 3vh;
+    margin-top: 1.5vh;
   }
 `;
 
@@ -52,12 +52,10 @@ const Body = styled.div`
 `;
 
 const BodyText = styled.p`
-  font-size: 1vw;
   color: #104a4f;
   display: inline;
   font-weight: 600;
   @media (max-width: ${theme.large}) {
-    font-size: 2.5vw;
     line-height: 5px;
     text-align: center;
   }

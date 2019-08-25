@@ -13,6 +13,9 @@ const Container = styled.div`
   @media (max-width: ${theme.large}) {
     height: auto;
     background-image: url(${opaqueUrl});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   overflow: hidden;
 `;
@@ -52,7 +55,6 @@ const Italicized = styled.p`
   font-style: italic;
   font-weight: lighter;
   @media (max-width: ${theme.large}) {
-    font-size: 0.8rem;
     text-shadow: 2px 2px 4px white;
   }
 `;

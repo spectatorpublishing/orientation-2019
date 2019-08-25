@@ -8,6 +8,7 @@ const Table = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -27,7 +28,7 @@ const Border = styled.div`
   height: auto;
   border: 2px solid;
   border-color: ${theme.yellow};
-  border-radius: 10px;
+  margin-bottom: 2vh;
 `;
 
 const TableEntry = styled.div`

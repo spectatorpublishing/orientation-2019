@@ -49,12 +49,11 @@ const BoxShadow = styled.div`
   }
 `;
 
-const Title = styled.h3`
+const Title = styled.h4`
   padding: 3rem;
-  font-size: 3vw;
   color: ${(props) => props.textColor};
   @media (max-width: ${theme.medium}) {
-    font-size: 6vw;
+    font-size: 7vw;
   }
 `;
 

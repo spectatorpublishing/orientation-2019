@@ -33,7 +33,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${(props) => props.theme.darkGray};
   }
   h1 {
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 8rem;
     font-weight: 400;
@@ -44,7 +44,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
   h2 {
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 4.9rem;
     font-weight: 300;
@@ -55,7 +55,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
   h3 {
-    color: ${(props) => props.theme.darkGray};
+    color: ${(props) => props.theme.navy};
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 2.2rem;
     font-weight: 300;
@@ -84,15 +84,15 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   p {
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-size: 0.8rem;
     font-weight: 700; 
     margin: 0;
   }
   
   a {
-    color: ${(props) => props.theme.black};
-    font-size: 2.2rem;
+    color: ${(props) => props.theme.navy};
+    font-size: 0.8rem;
     font-weight: 400; 
     margin: 0;
   }
