@@ -55,13 +55,17 @@ const ArticleContainer = styled.div`
   margin: 2vh 6vw;
 
   & > a {
-    flex: 0 1 46%;
+    flex: 1 1 46%;
     padding: 0rem 0.25rem 1rem 0.25rem;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
     max-height: 100%;
+  }
+  @media only screen and (max-width: ${(props) => props.theme.small}) {
+    flex-basis: 100%;
+    min-width: 5rem;
   }
 `;
 
