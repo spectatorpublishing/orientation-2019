@@ -49,23 +49,22 @@ const ArrowContainer = styled.div`
 
 const ArticleContainer = styled.div`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 2vh 6vw;
+  margin-top: -5rem;
+  direction: rtl;
+  align-items: flex-start;
 
   & > a {
-    flex: 1 1 46%;
-    padding: 0rem 0.25rem 1rem 0.25rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  @media only screen and (max-width: ${(props) => props.theme.small}) {
-    flex-basis: 100%;
-    min-width: 5rem;
+    box-sizing: border-box !important;
+    flex: 1 1 33%;
+    min-width: 20rem;
+    direction: ltr;
+    padding: 1rem;
+
+    @media only screen and (max-width: ${(props) => props.theme.small}) {
+      flex-basis: 100%;
+      min-width: 5rem;
+    }
   }
 `;
 
