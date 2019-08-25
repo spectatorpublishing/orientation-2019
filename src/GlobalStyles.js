@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   body,
   button {
-    font-family: 'Basic Sans', sans-serif;
+    font-family: 'basic-sans', sans-serif;
   }
   div {
     color: ${(props) => props.theme.darkGray};
@@ -64,6 +64,14 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400; 
     margin: 0;
   }
+  
+  a {
+    color: ${(props) => props.theme.black};
+    font-size: 2.2rem;
+    font-weight: 400; 
+    margin: 0;
+  }
+
   b {
     color: ${(props) => props.theme.black};
     font-size: 1.4rem;

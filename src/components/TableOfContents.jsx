@@ -26,7 +26,7 @@ const Container = styled.div`
 const Border = styled.div`
   height: auto;
   border: 2px solid;
-  border-color: #f47263;
+  border-color: ${theme.yellow};
   border-radius: 10px;
 `;
 
@@ -41,16 +41,17 @@ const TableEntry = styled.div`
 `;
 
 const TableText = styled.p`
-  font-size: 2.2vh;
+  font-size: 1.8vh;
+  font-weight: bold;
 
   &:hover {
-    color: ${theme.orange};
+    color: ${theme.purple};
   }
 
-  @media (max-width: ${theme.large}) {
+  @media (max-width: ${theme.medium}) {
     text-shadow: 2px 2px 4px white;
     margin-right: 2.5vw;
-    font-size: 1.4rem;
+    font-size: 0.8rem;
   }
 `;
 
