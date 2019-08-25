@@ -9,10 +9,18 @@ const Container = styled.a`
 
 const Headline = styled.h4`
   margin-top: 1rem;
+  color: #242c49;
 `;
 
 const Image = styled.img`
   max-width: 100%;
+`;
+
+const ClickNotice = styled.p`
+  color: #fdcbbb;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  display: block;
 `;
 
 function Article({
@@ -22,6 +30,7 @@ function Article({
     <Container href={link} target="_blank">
       <Image alt={photoAlt} src={photoUrl} />
       <Headline>{headline}</Headline>
+      <ClickNotice>| Click to read more</ClickNotice>
     </Container>
   );
 }

@@ -90,8 +90,8 @@ const DividerWithNames = (props) => {
   const defaultBody = (
     <div>
       <BodyText>
-        This website was created entirely by our tech and design teams here at
-        Spectator.
+        This website was created entirely by our tech and product design teams
+        here at Spectator.
       </BodyText>
       <br />
       <BodyText>
@@ -123,7 +123,6 @@ const DividerWithNames = (props) => {
       </Desktop>
       <MobileAndTablet>
         <MobileContainer>
-          <Title>CREDITS</Title>
           <NameText>{recognition}</NameText>
         </MobileContainer>
       </MobileAndTablet>
