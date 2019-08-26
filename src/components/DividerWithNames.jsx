@@ -55,6 +55,7 @@ const Title = styled.h3`
 const Body = styled.div`
   flex: 50%;
   height: 100%;
+  line-height: 3.5vh;
   @media (max-width: ${theme.medium}) {
     line-height: 2vh;
     margin: 2vh 5vw 0vh 5vw;
@@ -73,18 +74,16 @@ const Anchor = styled.a`
 const NameText = styled.h6`
   padding-left: 1rem;
   padding-right: 1rem;
-  line-height: 3vh;
+  line-height: 4.2vh;
   text-transform: uppercase;
   @media (max-width: ${theme.large}) {
     padding: 0;
-    line-height: 0;
+    line-height: 1.5vh;
     display: inline;
   }
 `;
 const DividerWithNames = (props) => {
-  const {
-    title, body, link,
-  } = props;
+  const { title, body, link } = props;
   const defaultBody = (
     <div>
       <BodyText>
@@ -112,7 +111,7 @@ const DividerWithNames = (props) => {
       <br />
       <NameText>
         DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG,
-        BILL CHEN & CHENOA Gale
+        Matthew Vanegas & CHENOA Gale
       </NameText>
     </div>
   );
@@ -140,7 +139,7 @@ const DividerWithNames = (props) => {
       <br />
       <NameText>
         DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG,
-        BILL CHEN & CHENOA Gale
+        Matthew Vanegas & CHENOA Gale
       </NameText>
     </div>
   );

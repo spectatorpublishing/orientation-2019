@@ -10,6 +10,7 @@ const MemberItem = styled.p`
   ;
 `;
 const Title = styled.h4`
+  font-size: 2rem;
   margin-bottom: 0.6rem;
   color: white;
   display: flex;
@@ -23,7 +24,6 @@ const Title = styled.h4`
   @media (max-width: ${theme.medium}) {
     height: 3.5rem;
     line-height: 2.3rem;
-    font-size: 2rem;
   }
 `;
 const Container = styled.div`

@@ -43,7 +43,7 @@ const Body = styled.div`
   height: 100%;
   padding: 0.8rem;
   padding-right: 4rem;
-  line-height: 2.2vh;
+  line-height: 3.3vh;
   @media (max-width: ${theme.large}) {
     line-height: 1.8vh;
     padding-left: 2.3rem;
@@ -56,7 +56,6 @@ const BodyText = styled.p`
   display: inline;
   font-weight: 600;
   @media (max-width: ${theme.large}) {
-    line-height: 5px;
     text-align: center;
   }
 `;

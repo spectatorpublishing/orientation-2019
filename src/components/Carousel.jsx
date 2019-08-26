@@ -30,9 +30,8 @@ const NavigationContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100vw;
-  top: 40%;
+  height: 4rem;
 `;
 
 const ArrowContainer = styled.div`
