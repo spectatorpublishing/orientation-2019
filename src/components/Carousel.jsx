@@ -86,6 +86,10 @@ const DesktopContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
+  & li {
+    height: 0;
+    display: inline-block;
+  }
 `;
 
 const MobileContainer = styled.div`
