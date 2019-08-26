@@ -6,7 +6,7 @@ import SectionTitle from "../components/SectionTitle.jsx";
 import BannerButton from "../components/BannerButton.jsx";
 import MapsList from "../components/MapsList.jsx";
 import Article from "../components/Article";
-import DiscourseContainer from "../components/DiscourseContainer";
+//import DiscourseContainer from "../components/DiscourseContainer";
 import Divider from "../components/Divider";
 import DividerWithNames from "../components/DividerWithNames";
 import GetToKnow from "../components/GetToKnow";
@@ -69,6 +69,7 @@ storiesOf("Article", module).add("Without Container", () => (
   />
 ));
 
+/*
 storiesOf("Discourse Container", module).add("With Articles", () => (
   <DiscourseContainer>
     <Article
@@ -93,6 +94,7 @@ storiesOf("Discourse Container", module).add("With Articles", () => (
     />
   </DiscourseContainer>
 ));
+*/
 
 storiesOf("Divider", module).add("Default", () => (
   <Divider
@@ -115,7 +117,7 @@ storiesOf("DividerWithNames", module).add("Default", () => (
 
 const backgroundImage = {
   image:
-    "https://spectator.arcpublishing.com/photo/resize/6OpqLabVVWxuYjOPt8GHrrT9CIE=/arc-anglerfish-arc2-prod-spectator/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg"
+    "https://upload.wikimedia.org/wikipedia/commons/c/c7/GoogleLogoSept12015.png"
 };
 const getToKnow = [
   {

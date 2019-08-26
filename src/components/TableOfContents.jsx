@@ -47,6 +47,7 @@ const TableText = styled.p`
 
   &:hover {
     color: ${theme.purple};
+    fontStyle: 'italic';
   }
 
   @media (max-width: ${theme.medium}) {
@@ -54,6 +55,7 @@ const TableText = styled.p`
     margin-right: 2.5vw;
     font-size: 3vh;
   }
+  text-transform: lowercase;
 `;
 
 const TableOfContents = (props) => {

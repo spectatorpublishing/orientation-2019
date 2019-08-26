@@ -15,6 +15,9 @@ const Container = styled.div`
   padding: 3vw;
   position: relative;
   overflow: hidden;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "HalloEuroboy", sans-serif;
 `;
 
 const ButtonContainer = styled.div`

@@ -17,7 +17,8 @@ const navBarEntries = [
   },
   {
     title: 'CLUBS',
-    linkUrl: 'https://www.columbiaspectator.com/orientation-2018/campus-maps/',
+    linkUrl:
+      'https://undergrad.admissions.columbia.edu/learn/studentlife/activities',
   },
   {
     title: 'REGISTRATION',
@@ -29,7 +30,7 @@ const navBarEntries = [
   },
   {
     title: 'MAPS',
-    linkUrl: 'https://www.columbiaspectator.com/orientation-2018/campus-maps/',
+    linkUrl: '/#/maps',
   },
   {
     title: '116 TRADITIONS',

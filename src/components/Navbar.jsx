@@ -54,6 +54,9 @@ const NavBarText = styled.a`
     padding-bottom: 4vh;
     font-size: 2rem;
   }
+  :hover {
+    color: ${theme.yellow};
+  }
 `;
 
 const ColumbiaSpectatorContainer = styled.div`
