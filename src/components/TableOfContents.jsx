@@ -42,7 +42,7 @@ const TableEntry = styled.div`
 `;
 
 const TableText = styled.p`
-  font-size: 1.8vh;
+  font-size: 2.2vh;
   font-weight: bold;
 
   &:hover {
@@ -52,7 +52,7 @@ const TableText = styled.p`
   @media (max-width: ${theme.medium}) {
     text-shadow: 2px 2px 4px white;
     margin-right: 2.5vw;
-    font-size: 0.8rem;
+    font-size: 3vh;
   }
 `;
 
@@ -63,20 +63,34 @@ const TableOfContents = (props) => {
       <Table>
         {entries.map((entry) => {
           const linkUrL = `#${entry.id}`;
-          return (
-            <TableEntry>
-              <Link
-                smooth
-                to={linkUrL}
-                style={{
-                  textDecorationLine: 'none',
-                }}
-                id={linkUrL}
-              >
-                <TableText>{entry.title}</TableText>
-              </Link>
-            </TableEntry>
+          let link = (
+            <Link
+              smooth
+              to={linkUrL}
+              style={{
+                textDecorationLine: 'none',
+              }}
+              id={linkUrL}
+            >
+              <TableText>{entry.title}</TableText>
+            </Link>
           );
+          if (entry.id === 'print') {
+            link = (
+              <a
+                href="https://drive.google.com/file/d/1pQH9_sq7CxXspCQGbp6iwN0aRc6Of5pg/view"
+                target="_blank"
+                rel="noopener noreferrer" // set to avoid potential data breach on the original page side;
+                // "noopener" denies access of the new page to the original,
+                // "noreferrer" prevents browser from sending original page address as referrer
+                style={{ textDecoration: 'none' }}
+              >
+                {' '}
+                <TableText>{entry.title}</TableText>
+              </a>
+            );
+          }
+          return <TableEntry>{link}</TableEntry>;
         })}
       </Table>
       <Border />

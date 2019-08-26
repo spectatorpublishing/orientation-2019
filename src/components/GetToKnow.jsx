@@ -25,7 +25,7 @@ const ButtonContainer = styled.div`
 
 const Title = styled.h3`
   text-shadow: -1px 3px white;
-  color: #e27400;
+  color: ${theme.orange} !important;
   flex: 1 1 0;
   min-width: 20rem;
   font-size: 4rem;

@@ -11,7 +11,7 @@ const NavBarContainer = styled.div`
   display: flex;
   flex-direction: inline-row;
   height: 6vh;
-  background: black;
+  background: ${theme.navy};
   justify-content: space-between;
   align-items: center;
   color: ${theme.navy};
@@ -40,7 +40,7 @@ const NavBarEntry = styled.div`
 `;
 
 const NavBarText = styled.a`
-  color: white;
+  color: white !important;
   font-family: "HalloEuroboy", sans-serif;
   font-size: 1.3rem;
 

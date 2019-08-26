@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const Container = styled.a`
   display: block;
@@ -8,7 +9,7 @@ const Container = styled.a`
 `;
 
 const Headline = styled.h4`
-  color: black;
+  color: ${theme.navy} !important;
   padding: 1.5rem;
 `;
 
@@ -20,7 +21,7 @@ const Image = styled.img`
 `;
 
 const Footer = styled.div`
-  background: #62a8e5;
+  background: ${theme.purple};
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 `;

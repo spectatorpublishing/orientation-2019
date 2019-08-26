@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const Container = styled.a`
   display: block;
@@ -17,20 +18,20 @@ const Image = styled.img`
 `;
 
 const ClickNotice = styled.p`
-  color: #fdcbbb;
+  color: ${(props) => props.linkColor} !important;
   font-size: 0.8rem;
   line-height: 1rem;
   display: block;
 `;
 
 function Article({
-  link, photoAlt, photoUrl, headline,
+  link, photoAlt, photoUrl, headline, linkColor,
 }) {
   return (
     <Container href={link} target="_blank">
       <Image alt={photoAlt} src={photoUrl} />
       <Headline>{headline}</Headline>
-      <ClickNotice>| Click to read more</ClickNotice>
+      <ClickNotice linkColor={linkColor}>| Click to read more</ClickNotice>
     </Container>
   );
 }

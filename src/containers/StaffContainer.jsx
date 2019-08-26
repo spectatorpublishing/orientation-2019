@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: #106e75;
+  background: ${theme.navy};
   align-items: center;
   padding: 1.5rem 2.5rem;
 
@@ -59,7 +59,7 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.h3`
-  color: white;
+  color: white !important;
 `;
 
 const StaffContainer = (props) => {
@@ -68,10 +68,10 @@ const StaffContainer = (props) => {
   return (
     <div>
       <Mobile>
-        <Container>
+        <Container id={id}>
           <Row>
             <TitleContainer>
-              <Title>Staff</Title>
+              <Title>STAFF</Title>
             </TitleContainer>
           </Row>
           <SectionRow mobile>
@@ -97,7 +97,7 @@ const StaffContainer = (props) => {
         <Container id={id}>
           <Row>
             <TitleContainer>
-              <Title>Staff</Title>
+              <Title>STAFF</Title>
             </TitleContainer>
           </Row>
           <SectionRow>
@@ -136,7 +136,7 @@ const StaffContainer = (props) => {
         <Container id={id}>
           <Row>
             <TitleContainer>
-              <Title>Staff</Title>
+              <Title>STAFF</Title>
             </TitleContainer>
           </Row>
           <SectionRow>

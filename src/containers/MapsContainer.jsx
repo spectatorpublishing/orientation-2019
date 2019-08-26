@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { ResponsiveComponent } from 'react-responsive-simple';
 import mapsData from '../data/MapsData';
 import { theme } from '../GlobalStyles';
 
@@ -56,7 +57,7 @@ const MapsList = styled.div`
 
       & p {
         padding: 0.3rem;
-        color: white;
+        color: white !important;
         font-weight: bold;
 
         @media (max-width: ${theme.large}) {
@@ -85,7 +86,7 @@ const MapDisplay = styled.div`
 `;
 
 const Title = styled.h3`
-  color: white;
+  color: white !important;
 `;
 
 export default class MapsContainer extends Component {
@@ -106,28 +107,32 @@ export default class MapsContainer extends Component {
   render() {
     const { currentMap } = this.state;
     return (
-      <Row>
-        <MapsList>
-          <div>
-            <Title>Maps</Title>
-            {mapsData.map(({ name, link }, i) => (
-              <div
-                key={name}
-                onClick={this.handleSelect}
-                onKeyDown={this.handleClick}
-                role="button"
-                tabIndex={i}
-                className={link === currentMap ? 'active' : false}
-              >
-                <p>{name}</p>
+      <>
+        <ResponsiveComponent min={768}>
+          <Row>
+            <MapsList>
+              <div>
+                <Title>MAPS</Title>
+                {mapsData.map(({ name, link }, i) => (
+                  <div
+                    key={name}
+                    onClick={this.handleSelect}
+                    onKeyDown={this.handleClick}
+                    role="button"
+                    tabIndex={i}
+                    className={link === currentMap ? 'active' : false}
+                  >
+                    <p>{name}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </MapsList>
-        <MapDisplay id="map">
-          <iframe title="map-iframe" src={currentMap} />
-        </MapDisplay>
-      </Row>
+            </MapsList>
+            <MapDisplay id="map">
+              <iframe title="map-iframe" src={currentMap} />
+            </MapDisplay>
+          </Row>
+        </ResponsiveComponent>
+      </>
     );
   }
 }
