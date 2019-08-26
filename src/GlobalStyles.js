@@ -59,7 +59,7 @@ font-display:auto;font-style:italic;font-weight:300;
 }
   body,
   button {
-    font-family: 'basic-sans', sans-serif !important;
+    font-family: 'basic-sans', sans-serif !important; 
   }
   div {
     color: ${(props) => props.theme.darkGray};
@@ -125,7 +125,7 @@ font-display:auto;font-style:italic;font-weight:300;
   h6 {
     color: ${(props) => props.theme.navy} !important;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 300; 
     margin: 0;
     font-family: 'HalloEuroboy', sans-serif;
 
@@ -163,7 +163,7 @@ font-display:auto;font-style:italic;font-weight:300;
       font-size: 1.3rem;
 
     }
-
+    
   }
 
   b {
