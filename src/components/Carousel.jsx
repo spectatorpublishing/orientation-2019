@@ -16,7 +16,7 @@ import { theme } from '../GlobalStyles';
 const ArticleRowWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0rem 2rem;
+  padding: 0rem 1rem;
 
   & > a {
     box-sizing: border-box !important;
@@ -49,7 +49,7 @@ const ArrowContainer = styled.div`
 
   & > .left {
     transform: rotate(135deg);
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
 
   & > .right {
