@@ -83,7 +83,7 @@ const NameText = styled.h6`
 `;
 const DividerWithNames = (props) => {
   const {
-    title, body, link, recognition,
+    title, body, link,
   } = props;
   const defaultBody = (
     <div>
@@ -176,6 +176,5 @@ DividerWithNames.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  recognition: PropTypes.string.isRequired,
 };
 export default DividerWithNames;

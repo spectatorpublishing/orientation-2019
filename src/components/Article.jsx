@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { theme } from '../GlobalStyles';
+// import { theme } from '../GlobalStyles';
 
 const Container = styled.a`
   display: block;
@@ -41,6 +41,7 @@ Article.propTypes = {
   photoUrl: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  linkColor: PropTypes.string.isRequired,
 };
 
 Article.defaultProps = {
